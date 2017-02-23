@@ -1,0 +1,85 @@
+
+Question sur la prog fonctionnelle.
+
+Question de cours
+
+> Structure d'arbre
+  -> comme les arbres généalogiques
+  -> stucture ordonné logique (<,>, Vrai, Faux , etc .... ) , parcours facile (vérification), rapide à parcourir
+  -> SE/Labyrinthe :p
+
+> Qu'est ce qu'un système Expert
+  -> Système basé sur des règles (définis par des Experts => capactiés de base)
+  -> Base de fait (tout ce qu'il a apris -> définis par un Expert puis approfondi avec les Utilisateurs)
+  -> moteur d'inférence => comment le SE raisonne -(chargé d'exploiter le contenui de la base de connaissance par rapport aux règle )
+
+> Définitions des règles dans un SE
+  -> par des experts
+  -> simples :p
+  -> peuvent être contradictoire (mais c'est pas bien)
+
+
+> Science Cognitive
+  -> essaye de se rapprocher des capacités humaines (mémoire, raisonnement, perception, ...)
+
+> L’intelligence artificielle est-elle une science cognitive ?
+  -> Oui pour chaque particularité
+  -> "Non" au global car trop de spécifité non résolu ~~
+
+> Objectif de l'IA
+  -> Aider l'homme dans ses activité
+  -> Approfondir les connaissances
+
+> Test de turing (?)
+C'est un ensemble de test permettant de savoir si un individu est une machine ou un robot (il est possible pour un humain de se faire passer pour un robot (mais c'est très dur), impossible dans l'autre sens)
+
+Interprétation de programme
+
+> Que fait le programme suivant
+a>2
+Soit F la fonction -> valeur
+soit F(a) selon a
+  a=3: a
+  a: F(a-1)
+
+Fonction qui renvoi
+
+> Ecrire en fonctionnel un programme renvoyant le n ième élément de la suite de Fibbonachi
+f(n)= f(n-2) + f(n-1)
+
+Soit Fibo -> valeur (int)
+  F(n) selon n
+  n=0 ou alors n=1: 1
+  n: F(n-1)+F(n-2)
+
+_ == rond plein
+° == rond vide
+
+> Ecrire selon les constructeur une fonction qui inverse l'ordre des élément d'une liste (en forme 1 => avec seulement la list en paramètre)
+[ a z e r g h u i j k ]
+Soit inverse -> valeur (list)
+inverse([]) -> []
+inverse(e°[]) -> e
+inverse( e°L_d ) -> d°(inverse L)_e
+
+> Ecrire au sens des sélecteur la fonction membre renvoyant un Booléen.
+Soit membre -> boolean
+membre(a,list): selon list
+Vide(list): false
+Non_Vide(list): Premier list = a ou alors membre(a,Fin list)
+
+> Ecrire en Fonctionnel une fonction permettant de trier une liste.
+Soit tri -> list
+tri(liste):
+tri([])-> list
+tri(e°[])-> list
+tri(e°L) -> Soit (d°F)= tri(L) dans e < d alors e°a ou alors  d ° tri(e°F)
+
+> Faire une fonction permettant de récupérer la valeur associer à une clé dans une liste de couples
+>AU SENS DES SELECTEUR
+[(clé1,valeur) (clé2,xxxxxxx) ....]
+
+
+>AU SENS DES CONSTRUCTEURS
+
+

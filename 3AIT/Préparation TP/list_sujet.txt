@@ -1,0 +1,26 @@
+--- SUJET DE CONCOURS INGE --------------------
+--- Objectif : arriver le plus loin en 4h ^^ --
+
+http://www.sujets-de-concours.net/sujets/x/2010/mp/info_option.pdf
+
+http://www.sujets-de-concours.net/sujets/x/2010/mp/info.pdf
+
+http://www.sujets-de-concours.net/sujets/xens/2015/mp/info_option.pdf
+
+http://www.sujets-de-concours.net/sujets/xens/2015/commun/informatique.pdf
+
+(d'une façon globale : http://www.sujets-de-concours.net/concours_filiere.php?concours=x&filiere=mp)
+
+---
+
+------ SUJET Maison ------
+
+1 - Fonctions de bases
+
+=> IMPLÉMENTER LES FONCTIONS SUIVANTES :
+
+membre(List, element) => (element, booleean). (boolean vrai si e in list && faux sinon)
+
+split (L) => (l1,l2) tel 0 <= l1-l2 <= 1
+
+implémenter le TRI_FUSION qui prend une liste, la split et la trie.
