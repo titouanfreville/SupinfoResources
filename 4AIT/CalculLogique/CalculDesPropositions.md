@@ -51,12 +51,34 @@
 | 1 | 0 | 0 | 0	    |
 | 1 | 1 | 1 | 1	    |
 
-### Mise sous forme normale conhectives
+### Mise sous forme normale conjonctive
 
 (( a => (b ∨ c)) ∧ ((b ∨ d) => (e ∧ f))) ∧ ¬e
 
 -> ( (¬a ∨ b ∨ c) ∧ ( ¬(b ∨ d) ∨ (e ∧ f) ) ) ∧ ¬e
--> ( ¬e ∧ (¬a ∨ b ∨ c) ) ∧ ( ¬e  ∧ ( (e ∨ (¬(b ∨ d))) ∨ (f ∧ ¬(b ∨ d)) ))
--> ( ¬e ∧ (¬a ∨ b ∨ c) ) ∧ ( ¬e ∧ (e ∨ (¬(b ∨ d)) ) ∨ ¬e  ∧ (f ∧ ¬(b ∨ d)))
--> ( ¬e ∧ (¬a ∨ b ∨ c) ) ∧ ( (¬e ∧ ¬(b ∨ d)) ∨ (¬e ∧ f ∧ ( ¬e ∧ ¬(b ∨ d))))
--> ( ¬e ∧ (¬a ∨ b ∨ c) ) ∧ () 
+-> ((¬a ∨ b ∨ c) ∧ ( (¬b ∧ ¬d) ∨ (e ∧ f))) ∧ ¬e
+-> ( (¬a ∨ b ∨ c) ∧ ¬e ) ∧ ( (¬b ∧ ¬d) ∨ (e ∧ f)) ∧ ¬e )
+-> ( (¬a ∨ ¬e) ∧ (b ∨ ¬e) ∧ (c ∨ ¬e) ) ∧ ( (¬b ∧ ¬d ∧ ¬e) ∨ ( e ∧ f ∧ ¬e ))
+-> ( (¬a ∨ ¬e) ∧ (b ∨ ¬e) ∧ (c ∨ ¬e) ) ∧ ( (¬b ∧ ¬d ∧ ¬e) ∨ FAUX )
+-> (¬a ∨ ¬e) ∧ (b ∨ ¬e) ∧ (c ∨ ¬e) ∧ ¬b ∧ ¬d ∧ ¬e
+
+## Formules à démontrer
+
+### Donner deux totologie
+
+a ∨ ¬a
+
+a <=> a
+
+### Donner une formule élémentaire toujours fausse
+
+a => ¬a
+a ∧ ¬a
+
+### Déduire ε dans les forumles suivantes
+
+#### a ∨ ¬b ∨ c
+
+¬a ∧ b ∧ ¬c => ε
+
+####
