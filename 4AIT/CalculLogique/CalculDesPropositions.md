@@ -77,8 +77,8 @@ a ∧ ¬a
 
 ### Déduire ε dans les forumles suivantes
 
-#### a ∨ ¬b ∨ c
+Do not know yet. 
 
-¬a ∧ b ∧ ¬c => ε
-
-####
+### Montrer par réfutation la proposition : 
+(( ( a => (b ∨ c)) ∧ ((b ∨ d) => (e ∧ f)) ) ∧ ¬e ) => (a => c)
+  
