@@ -125,6 +125,12 @@
 %% assert(pere(b,c)). %% true
 %% retractall(pere(_,_)). %% true
 
+%% % EXERCICE --- Explain recursive shemes : 
+%% % apply is an instruction to apply provided fonction to first element of %% provided list and put the result into the second element of the list. 
+%% apply(plus(1), [10,X]). %% plus(1), [10|X] -> plus(1,10), [X|[]] -> plus(1,10,X)%% , true 
+%% apply(compare(>), [2,3]). %% compare(>), [2|3] -> compare(>,2), [3] -> compare%% (>, 2, 3), true
+%% apply(membre, [d, [a,d,e,f]]). %% membre(), [2|3] -> membre(d), [[a,d,e,f]] -> %% membre(d, [a,d,e,f]), true
+%% apply(longuer,[[2,3,4,e,r],Res]).
 %% <><><><><><><><><><><><><><><><><><> <><><><><><><><><><><><><><><><><><> <><><><><><><><><><><><><><><><><><><><><><> %%
 %% <><><><><><><><><><><><><><><><><><><><><> USE THIS PART WITH CONSULT <><><><><><><><><><><><><><><><><><><><><><><><> %%
 
@@ -269,4 +275,9 @@ elementPair(X,List):- member(X,List), isPair(X).
 %elementPair([],[]).
 %elementPair([X|Q], Res):- isPair(X,2), elementPair(Q, OldRes), Res is [X|OldRes].
 %elementPair([_|Q], Res):- elementPair(Q, Res).
+
+%% EXERCICE --- Compt liste element
+
+compt([], 0).
+compt([_|Y], Res):- compt(Y, OldRes), Res is OldRes + 1.
 %% <><><><><><><><><><><><><><><><><><> <><><><><><><><><><><><><><><><><><> <><><><><><><><><><><><><><><><><><><><><><><><>
