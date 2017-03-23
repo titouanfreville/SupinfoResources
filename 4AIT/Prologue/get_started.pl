@@ -153,10 +153,10 @@ soustraire(X,Y):- Y is X-10.
   pere(jules, eve).
   tous_presents:- pere(X, Y), writef('%w est le père de %w', [X, Y]).
 %but - To run in REPL
-%  aime(jean, prolog). %% true
-%  blanche(maison). %% true
-%  blanche(voiture). %% false
-%  achete(jean, voiture). %% true
+  % aime(jean, prolog). %% true
+  % blanche(maison). %% true
+  % blanche(voiture). %% false
+  % achete(jean, voiture). %% true
 % %% Friends
 % ami(jean, X), ami(pierre, X). %% X = yves ; X = tom ; false.
 % %% Family
@@ -259,8 +259,14 @@ factorielle(X, Res):- X > 0, NewX is X-1, factorielle(NewX, OldRes), Res is X * 
 %% step res.
 
 %%  EXERCICE --- LISTE PAIRE
-isPair(X,Y):- 0 =:= X mod Y.
-elementPair([],[]).
-elementPair([X|Q], Res):- isPair(X,2), elementPair(Q, OldRes), Res is [X|OldRes].
-elementPair([_|Q], Res):- elementPair(Q, Res).
+isPair(X):- 0 =:= X mod 2.
+
+member(X,[X|_]).
+member(X,[_|Y]):- member(X,Y).
+
+elementPair(X,List):- member(X,List), isPair(X).
+
+%elementPair([],[]).
+%elementPair([X|Q], Res):- isPair(X,2), elementPair(Q, OldRes), Res is [X|OldRes].
+%elementPair([_|Q], Res):- elementPair(Q, Res).
 %% <><><><><><><><><><><><><><><><><><> <><><><><><><><><><><><><><><><><><> <><><><><><><><><><><><><><><><><><><><><><><><>
