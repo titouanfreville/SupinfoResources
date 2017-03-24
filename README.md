@@ -4,6 +4,16 @@ This repository provide resources for AIT courses of Supinfo schools (3rd year a
 
 ## 3 AIT
 
+### Working environement
+
+- Linux `sudo apt-get install clisp`
+- Mac `brew install clisp`
+- Windows télécharger `clisp`
+- Download `sublime text`
+- get package manager
+- get SublimeREPL and Lisp langage support
+- Run REPL with common lisp
+
 ### List of corrections available (lisp)
 
 In lisp folder :)
@@ -57,15 +67,58 @@ Guess where :p
 | lisp    | lisp.lisp  |
 | python  | python.py  |
 
-### TPs 
+### TPs
 
 TP_NOTE contain correction of the TP we had in 2016. 
 rattrapage contain correction of the TP for 2d timer we had in 2016. 
 
 ## 4 AIT
 
-### Calcul logique. 
+### Calcul logique
 
 ### Prologue
 
-Get started contain all 'mini' exercises introducting prolog language in the course and some others bases. 
+Get started contain all 'mini' exercises introducting prolog language in the course and some others bases.
+
+#### Working environement
+
+##### Linux (Debian, Ubuntu, and other apt user)
+
+- `sudo apt-get install swi-prolog`
+- Download `sublime text` or `visual studio code`
+
+###### `VSCode`
+
+- get package Prologue
+- in configuration add: `"files.associations": { "*.pl": "prolog"}`
+- use terminal (integrated or extern) to run prologue: `swipl`
+- clauses and foncteur are to be used with `consult`. Goals need to be copy paste to `swipl`
+
+###### `Sublime Text`
+
+- get package manager
+- get SublimeREPL and Prolog langage support
+- Open package (`~/.config/sublime-text-3/Packages/SublimeREPL/config/Prolog`)
+- Change `Main.sublime-menu` `"cmd": ["...."]` into `"cmd": ["swipl"]`
+- Run REPL with prolog
+
+#### Correction TPs
+
+| TP number | TP group | File to consult | Lines       |
+| --------- | -------- | --------------- | ----------- |
+| TP 4      | 1        | tp4.pl          | 1 to 71     |
+|           | 2        | tp4.pl          | 72 to 141   |
+|           | 3        | tp4.pl          | 142 to 170  |
+|           | 4        | tp4.pl          | 171 to 186  |
+|           | 5        | tp4.pl          | 187 to 243  |
+
+
+# Nicer Sublime text
+
+- get `Seti UI` package
+- get `lisp indent` package
+
+# Nicer VSCode
+
+- get `icon theme`
+- get `seti icon theme`

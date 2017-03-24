@@ -239,5 +239,7 @@ merge([T1|Q1],[T2|Q2],[T2|List]):-not(T1<T2), merge([T1|Q1], Q2, List).
 
 tri([], []).
 tri([T|[]], [T]).
-tri(List, Res):- split(List, L1, L2), tri(L1, Res1), tri(L2, Res2), merge(Res1, Res2, Res).
+tri([], []).
+tri([T|[]], [T]).
+tri(List, Res):- split(List, L1, L2), tri(L1, Res1), tri(L2, Res2), merge(Res1, Res2, Res), !.
 % ><><><><><><><><><><><><><><><> <><><><><> <><><><><><><><><><><><><><><>< %
