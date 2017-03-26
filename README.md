@@ -82,7 +82,7 @@ Get started contain all 'mini' exercises introducting prolog language in the cou
 
 #### Working environement
 
-##### Linux (Debian, Ubuntu, and other apt user)
+##### Linux / MacOS
 
 - `sudo apt-get install swi-prolog`
 - Download `sublime text` or `visual studio code`

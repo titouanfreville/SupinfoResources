@@ -114,7 +114,7 @@
   parent(ema,thomas).
   parent(hugo,thomas).
 
-%foncteurs$
+%foncteurs
   % Remove duplicate from List
   removeDuplicates([], []).
   removeDuplicates([T|Q], NewList):- member(T,Q), removeDuplicates(Q, NewList).
