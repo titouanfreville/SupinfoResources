@@ -1,6 +1,6 @@
 # Supinfo AIT resources
 
-This repository provide resources for AIT courses of Supinfo schools (3rd year and 4th year). They mostly consist in LABS and TPs corrections in various langages and syntaxes. 
+This repository provide resources for AIT courses of Supinfo schools (3rd year and 4th year). They mostly consist in LABS and TPs corrections in various langages and syntaxes.
 
 ## 3 AIT
 
@@ -9,10 +9,22 @@ This repository provide resources for AIT courses of Supinfo schools (3rd year a
 - Linux `sudo apt-get install clisp`
 - Mac `brew install clisp`
 - Windows télécharger `clisp`
+
+#### Set up with Sublime
+
 - Download `sublime text`
 - get package manager
 - get SublimeREPL and Lisp langage support
 - Run REPL with common lisp
+
+#### Set up with atom-slime
+
+ - Clone `slime` project: `git clone https://github.com/slime/slime.git`
+ - Get `atom-slime` package from atom
+ - Go into `slime` clone
+ - run `make && make run-swank`
+ - into atom: `Maj+Ctl+P`, `Slime:Connect`
+ 
 
 ### List of corrections available (lisp)
 
@@ -69,8 +81,8 @@ Guess where :p
 
 ### TPs
 
-TP_NOTE contain correction of the TP we had in 2016. 
-rattrapage contain correction of the TP for 2d timer we had in 2016. 
+TP_NOTE contain correction of the TP we had in 2016.
+rattrapage contain correction of the TP for 2d timer we had in 2016.
 
 ## 4 AIT
 

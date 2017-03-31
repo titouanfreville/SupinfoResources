@@ -37,7 +37,7 @@ removeDuplicates([T|Q], [T|List]):- not(member(T, Q)), removeDuplicates(Q, List)
 %add Case link to chessBoard
 addChessLink(X,Y):- assertz(chessLink(X,Y)), assertz(chessLink(Y,X)).
 %Init chess board (no functor yet).
-initChess():- addChessLink(0,1), addChessLink(1,2),
+initChess():- assert(chessLink(0,1)), assert(chessLink(1,0)), addChessLink(1,2),
 addChessLink(0,3), addChessLink(0,4), addChessLink(1,3), addChessLink(1,4), addChessLink(1,5), addChessLink(2,4), addChessLink(2,5),
 addChessLink(3,4), addChessLink(4,5),
 addChessLink(3,6), addChessLink(3,7), addChessLink(4,6), addChessLink(4,7), addChessLink(4,8), addChessLink(5,7), addChessLink(5,8),
@@ -48,6 +48,6 @@ newLinkGroup(Key1, Key2, List):- assertz(groupLink(Key1,Key2, List)).
 concatList(L1,[],L1).
 concatList(L1,[T|Q],[T|List]):- concatList(L1, Q, List), !.
 
-regroup():-findall(X, chessLink(X,_), List), newGroup(X,List).
+regroup():-bagof(X, chessLink(X,_), List), newGroup(X,List).
 linkGroup():-group(X,List1), link(X,Y), group(Y,List2), concat(List1, List2, L), removeDuplicates(L, List), newLinkGroup(X,Y, List).
 % <><><><><><><><><><><><><><><><> <><><><> <><><><><><><><><><><><><><><><><> %
