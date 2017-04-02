@@ -27,10 +27,12 @@ L(L+C)\*
 ## 2 - Réécriture
 
 ∑ =  {Nom, Maj, min, sep}, avec Maj= {A,B,...,Z}, min= {a,b,...,z}, sep={., }, Nom={Maj,min\*}
+
 F1 = NomsepMaj(min)\*
+
 F2 = MajsepsepNom (?)
 
-## 3 - Signification des expressions
+## 3 - Signification des expressions
 
 ### (aa)⁺
 
