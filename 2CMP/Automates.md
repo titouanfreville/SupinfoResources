@@ -4,4 +4,4 @@
 
 ### Automates binaire simple
 
-[testimage](automate_binaire_simple.png)
+![](automate_binaire_simple.png)
