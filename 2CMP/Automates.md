@@ -4,29 +4,29 @@
 
 ### Automates binaire simple
 
-![](automate_binaire_simple.png)
+![](images/automate_binaire_simple.png)
 
 ### Automates binaire sans bites non significatifs
 
-![](automates_binaire_no_unsig_bites.png)
+![](images/automates_binaire_no_unsig_bites.png)
 
 ## Morse
 
-![](morse.png)
+![](images/morse.png)
 
 ## ER
 
 ### a\*b\*c
 
-![](er1_a*b*c.png)
+![](images/er1_a*b*c.png)
 
 ### (ab)⁺
 
-![](er2_ab+.png)
+![](images/er2_ab+.png)
 
 ### c|(a⁺b\*)
 
-![](er3.png)
+![](images/er3.png)
 
 ## Automates à Pile
 
@@ -81,7 +81,7 @@ Config = {
    
 }
 
-![](pile_addition_1.png)
+![](images/pile_addition_1.png)
 
 ### Lecture 180+26
 
@@ -138,7 +138,7 @@ Config = {
    
 }
 
-![](pile_lecture_1.png)
+![](images/pile_lecture_1.png)
 
 ### Lecture 180+26=
 
@@ -199,4 +199,4 @@ Config = {
    
 }
 
-![](pile_lecture_2.png)
+![](images/pile_lecture_2.png)
