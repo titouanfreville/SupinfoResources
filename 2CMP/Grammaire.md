@@ -78,7 +78,7 @@ GN = (
 
 )
 
-### 4 - Donnez les phrases générer par la grammaire ... 
+### 4 - Donnez les phrases générer par la grammaire ... 
 
 La voiture roule. La moto roule. Une voiture roule. Une moto roule. La voiture est. La moto est. Une voiture est. Une moto est.
 La voiture roule bien. La moto roule bien. Une voiture roule bien. Une moto roule bien. La voiture roule bleue. La moto roule bleue. Une voiture roule bleue. Une moto roule bleue.
@@ -90,7 +90,7 @@ EBNF ( présence du raccourice [])
 
 ## 2 - Description grammaire de Chomsky
 
-### Grammaire des mots binaires
+### Grammaire des mots binaires
 
 GB = (
 
@@ -98,7 +98,7 @@ GB = (
 
       < mot >: < mot >< chiffre >
 
-      < chiffre >: "0" | "1"
+      < chiffre >: "0" | "1"
 
     },
 
@@ -112,7 +112,7 @@ GB = (
 
 type 3 : règulière à gauche. (Mot -> Mot 0 | Mot 1)
 
-### S -> aS | ab | ε est elle hors contexte ? Mot générée ?
+### S -> aS | ab | ε est elle hors contexte ? Mot générée ?
 
 Non. Car S -> aS (grammaire régulière à droite).
 
