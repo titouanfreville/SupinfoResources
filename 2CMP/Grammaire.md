@@ -151,6 +151,7 @@ F -> TS
 ### Création de la grammaire X cat X ou X in {1}\*
 
 G : (
+
     {
         < exp > : < nombre > "cat" < nombre > "="
         < nombre > : < nombre > 1
@@ -160,17 +161,23 @@ G : (
     },
     {},
     {< exp >}
+    
 )
 
 Exp -> Nb "cat" Nb "="
+
 Nb -> Nb 1
 
 ### Représentation cohérante de la grammaire arithmétique polonaise
 
 S -> (Opérateur T T)
+
 T -> S | N
+
 Opérateur -> + | - | * | /
+
 N -> N0 | N1 | N2 | N3 | N4 | N5 | N6 | N7 | N8 | N9
+
 
 ## 4 - Grammaire et Automates
 
@@ -180,4 +187,4 @@ N -> N0 | N1 | N2 | N3 | N4 | N5 | N6 | N7 | N8 | N9
 
 ### Fini ?
 
-Dans le sens ou la grammaire défini ne contient que les 4 opérateurs, les (), l'_ et les chiffres, l'automates est finis.
+Dans le sens ou la grammaire défini ne contient que les 4 opérateurs, les (), l'espace et les chiffres, l'automates est finis.
