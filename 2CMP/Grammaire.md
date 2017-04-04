@@ -127,12 +127,21 @@ Tout ensemble de a et b en contenant au moins un. (a, b, ab, ba, abab, aabb, abb
 ### Mettre sous forme normale la grammaire : S -> TF | aS | a, T -> Tb | ε, F -> TS
 
 S -> aS0
+
 S -> TF
+
 S -> a
+
 S0 -> TF
+
 S0 -> a
+
 T -> T0b
+
 T -> b
+
 T0 -> ε
+
 T0 -> b
+
 F -> TS
