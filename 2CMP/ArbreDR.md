@@ -13,16 +13,16 @@ NT : S. T : x, y, z
 t=xzyz : vrai. s=xxzzyy : faux, il doit y avoir un z en fin de chaque expression.
 
 Démonstration par arbre (t puis s) :
-![](demo_reduction_511.png)
+![](images/demo_reduction_511.png)
 
 u= xxxyyyzxyz: faux, un x ne peut pas être suivi d'un y.
 
-![](demo_reduction_511_u.png)
+![](images/demo_reduction_511_u.png)
 
 
 v= xxzyxxzyzyzyzyxzyz : Faux. Un yS n'est pas lié avec un xS en fin d'arbre. (il reste S, yS).
 
-![](demo_reduction_511_v.png)
+![](images/demo_reduction_511_v.png)
 
 ### G2: S -> x | (T) , T -> S, T | S
 
@@ -67,15 +67,15 @@ T: vrai/faux/ou/et/non/(). NT: A, GB
 
 t= non(faux ou vrai) : vrai
 
-![](demo_reduction_GB_t.png)
+![](images/demo_reduction_GB_t.png)
 
 s = non vrai ou non (faux et vrai) : vrai.
 
-![](demo_reduction_GB_s.png)
+![](images/demo_reduction_GB_s.png)
 
 u = ((non vrai ou (faux ou vrai)) ou (vrai ou (vrai et faux))) ou vrai: vrai
 
-![](demo_reduction_GB_u.png)
+![](images/demo_reduction_GB_u.png)
 
 ## 3 - Expression Arithmétique
 
@@ -93,15 +93,15 @@ E
 
 t= 3+4+5: vrai
 
-![](demo_reduction_GA_t.png)
+![](images/demo_reduction_GA_t.png)
 
 s=(1+3*2): vrai
 
-![](demo_reduction_GA_s.png)
+![](images/demo_reduction_GA_s.png)
 
 u=((2+3)*((4+5)+7))+123: vrai
 
-![](demo_reduction_GA_u.png)
+![](images/demo_reduction_GA_u.png)
 
 ### Ambigüe (?)
 
