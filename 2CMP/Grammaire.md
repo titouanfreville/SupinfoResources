@@ -145,3 +145,39 @@ T0 -> ε
 T0 -> b
 
 F -> TS
+
+## 3 Grammaire des expressions arithmétiques.
+
+### Création de la grammaire X cat X ou X in {1}\*
+
+G : (
+    {
+        < exp > : < nombre > "cat" < nombre > "="
+        < nombre > : < nombre > 1
+    },
+    {
+        "cat", "=", 1
+    },
+    {},
+    {< exp >}
+)
+
+Exp -> Nb "cat" Nb "="
+Nb -> Nb 1
+
+### Représentation cohérante de la grammaire arithmétique polonaise
+
+S -> (Opérateur T T)
+T -> S | N
+Opérateur -> + | - | * | /
+N -> N0 | N1 | N2 | N3 | N4 | N5 | N6 | N7 | N8 | N9
+
+## 4 - Grammaire et Automates
+
+### Shématisez sous forme d'automates la grammaire vue en 4-3-2
+
+![](automates_syntaxe_polonaise.png)
+
+### Fini ?
+
+Dans le sens ou la grammaire défini ne contient que les 4 opérateurs, les (), l'_ et les chiffres, l'automates est finis.
