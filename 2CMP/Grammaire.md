@@ -17,17 +17,11 @@ symbole terminaux:  if, else, ;, {, }
 GN = (
 
     {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9",} /* termiaux */
-
     { < nombre >, < chiffre > }, /* non terminaux */
-
     {   /* production */
-
         < nombre > ::= < nombre > | < chiffre >
-
         < chiffre > ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
-
     }
-
     < nombre > /* axiome */
 
 )
@@ -39,19 +33,12 @@ GN = (
 GN = (
 
     {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "-", "+"} /* termiaux */
-
     { < nombre >, < chiffre >, < signe > }, /* non terminaux */
-
     {   /* production */
-
         < nombre > ::= < signe > < nombre > | < signe >< chiffre > | < chiffre >
-
         < signe > ::= "+" | "-"
-
         < chiffre > ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
-
     }
-
     < nombre > /* axiome */
 
 )
@@ -61,19 +48,12 @@ GN = (
 GN = (
 
     {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "-"} /* termiaux */
-
     { < nombre >, < chiffre >, < signe > }, /* non terminaux */
-
     {   /* production */
-
         < nombre > ::= [ < signe > ] (< nombre > | < chiffre >)
-
         < signe > ::= "-"
-
         < chiffre > ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
-
     }
-
     < nombre > /* axiome */
 
 )
@@ -95,17 +75,11 @@ EBNF ( présence du raccourice [])
 GB = (
 
     {
-
       < mot >: < mot >< chiffre >
-
       < chiffre >: "0" | "1"
-
     },
-
     {"0", "1"},
-
     {},
-
     {< mot >}
 
 )
@@ -161,7 +135,7 @@ G : (
     },
     {},
     {< exp >}
-    
+
 )
 
 Exp -> Nb "cat" Nb "="
