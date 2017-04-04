@@ -61,7 +61,7 @@ T : {
    
    (+, 1, $p1p0p+) -> (1, $p1p0p+p1)
    
-   (1, 1, $p1p0p+p1) -> (1, Epsilon)
+   (1, 1, $p1p0p+p1) -> (1,  ε)
    
 }
 
@@ -69,15 +69,15 @@ T : {
 
 Config = {
 
-   (1,1,$) |- (1, Epsilon, $p1)
+   (1,1,$) |- (1,  ε, $p1)
     
-   (1, 0, $p1) |- (0, Epsilon, $p1p0)
+   (1, 0, $p1) |- (0,  ε, $p1p0)
    
-   (0, +, $p1p0) |- (+, Epsilon, $p1p0p+)
+   (0, +, $p1p0) |- (+,  ε, $p1p0p+)
    
-   (+, 1, $p1p0p+) |- (1, Epsilon, $p1p0p+p1)
+   (+, 1, $p1p0p+) |- (1,  ε, $p1p0p+p1)
    
-   (1, 1, $p1p0p+p1) |- (1, Epsilon) *->* Accepté
+   (1, 1, $p1p0p+p1) |- (1,  ε) *->* Accepté
    
 }
 
@@ -116,7 +116,7 @@ T : {
    
    (N, 2, $p1p8p0p+) -> (N, $p1p8p0p+p2)
 
-   (N, 6, $p1p8p0p+p2) -> (N, Epsilon)
+   (N, 6, $p1p8p0p+p2) -> (N,  ε)
    
 }
 
@@ -124,17 +124,17 @@ T : {
 
 Config = {
 
-   (N, 1, $) |- (N, Epsilon, $p1)
+   (N, 1, $) |- (N,  ε, $p1)
    
-   (N, 8, $p1) |- (N, Epsilon, $p1p8)
+   (N, 8, $p1) |- (N,  ε, $p1p8)
    
-   (N, 0, $p1p8) |- (+, Epsilon, $p1p8p0)
+   (N, 0, $p1p8) |- (+,  ε, $p1p8p0)
    
-   (+, +, $p1p8p0) |- (N, Epsilon, $p1p8p0p+)
+   (+, +, $p1p8p0) |- (N,  ε, $p1p8p0p+)
    
-   (N, 2, $p1p8p0p+) |- (N, Epsilon, $p1p8p0p+p2)
+   (N, 2, $p1p8p0p+) |- (N,  ε, $p1p8p0p+p2)
 
-   (N, 6, $p1p8p0p+p2) |- (N, Epsilon) *->* Accepté
+   (N, 6, $p1p8p0p+p2) |- (N,  ε) *->* Accepté
    
 }
 
@@ -175,7 +175,7 @@ T : {
 
    (N, 6, $p1p8p0p+p2) -> (S, $p1p8p0p+p2p6)
 
-   (S, =, $p1p8p0p+p2p6) -> (S, Epsilon)
+   (S, =, $p1p8p0p+p2p6) -> (S,  ε)
    
 }
 
@@ -183,19 +183,19 @@ T : {
 
 Config = {
 
-   (N, 1, $) |- (N, Epsilon, $p1)
+   (N, 1, $) |- (N,  ε, $p1)
    
-   (N, 8, $p1) |- (N, Epsilon, $p1p8)
+   (N, 8, $p1) |- (N,  ε, $p1p8)
    
-   (N, 0, $p1p8) |- (+, Epsilon, $p1p8p0)
+   (N, 0, $p1p8) |- (+,  ε, $p1p8p0)
    
-   (+, +, $p1p8p0) |- (N, Epsilon, $p1p8p0p+)
+   (+, +, $p1p8p0) |- (N,  ε, $p1p8p0p+)
    
-   (N, 2, $p1p8p0p+) |- (N, Epsilon, $p1p8p0p+p2)
+   (N, 2, $p1p8p0p+) |- (N,  ε, $p1p8p0p+p2)
 
-   (N, 6, $p1p8p0p+p2) |- (N, Epsilon, $p1p8p0p+p2p6)
+   (N, 6, $p1p8p0p+p2) |- (N,  ε, $p1p8p0p+p2p6)
    
-   (S, =, $p1p8p0p+p2p6) -> (S, Epsilon) *->* Accepté
+   (S, =, $p1p8p0p+p2p6) -> (S,  ε) *->* Accepté
    
 }
 
