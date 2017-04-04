@@ -77,7 +77,7 @@ Config = {
    
    (+, 1, $p1p0p+) |- (1,  ε, $p1p0p+p1)
    
-   (1, 1, $p1p0p+p1) |- (1,  ε) *->* Accepté
+   (1, 1, $p1p0p+p1) |- (1,  ε) **->** Accepté
    
 }
 
@@ -134,7 +134,7 @@ Config = {
    
    (N, 2, $p1p8p0p+) |- (N,  ε, $p1p8p0p+p2)
 
-   (N, 6, $p1p8p0p+p2) |- (N,  ε) *->* Accepté
+   (N, 6, $p1p8p0p+p2) |- (N,  ε) **->** Accepté
    
 }
 
@@ -195,7 +195,7 @@ Config = {
 
    (N, 6, $p1p8p0p+p2) |- (N,  ε, $p1p8p0p+p2p6)
    
-   (S, =, $p1p8p0p+p2p6) -> (S,  ε) *->* Accepté
+   (S, =, $p1p8p0p+p2p6) |- (S,  ε) **->** Accepté
    
 }
 
