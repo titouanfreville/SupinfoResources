@@ -4,6 +4,37 @@ This repository provide resources for AIT courses of Supinfo schools (3rd year a
 
 ## 2 CMP
 
+### Working environement
+
+- Linux `sudo apt-get install gcc flex byacc`
+- Mac `brew install gcc flex bison` (if exist in brew, used `byacc` instead of `bison`)
+
+### Automata tool
+
+[http://madebyevan.com/fsm/](http://madebyevan.com/fsm/) is the one I used. You can also use yEd or any graphics editor you like and master.
+
+### Labs Correction
+
+#### Part 1
+
+TP Number | Tp Group | File to consult               | Lines     | Link
+--------- | -------- | ----------------------------- | --------- | ------------------------------------------------------------------------
+ 1        | 2        | discovery/factorielle.c       | all       | [click](2CMP/discovery/factorielle.c)
+          | 3        | discovery,discovery/Makefile  | all       |
+ 2        | 1        | Regex.md                      | 1 - 26    | [Regex.md](2CMP/Regex.md)
+          | 2        | Regex.md                      | 27 - 34   | [Regex.md](2CMP/Regex.md#2---réécriture)
+          | 3        | Regex.md                      | 35 - end  | [Regex.md](2CMP/Regex.md#3---signification-des-expressions)
+ 3        | 1        | Automates.md                  | 1 - 12    | [Automates.md](2CMP/Automates.md)
+          | 2        | images/morse.png              |           | [Automates.md](2CMP/Automates.md#morse)
+          | 3        | Automates.md                  | 17 - 30   | [Automates.md](2CMP/Automates.md#er)
+          | 4        | Automates.md                  | 31 - end  | [Automates.md](2CMP/Automates.md#automates-à-pile)
+4         | 1        | Grammaire.md                  | 3 - 70    | [Grammaire.md](2CMP/Grammaire.md)
+          | 2        | Grammaire.md                  | 71 - 138  | [Grammaire.md](2CMP/Grammaire.md#2---description-grammaire-de-chomsky)
+          | 3        | Grammaire.md                  | 139 - 171 | [Grammaire.md](2CMP/Grammaire.md#3-grammaire-des-expressions-arithmétiques)
+          | 4        | Grammaire.md                  | 172 - end | [Grammaire.md](2CMP/Grammaire.md#4---grammaire-et-automates)
+5         | 1        | ArbreDR.md                    | 3 - 56    | [ArbreDR.md](2CMP/ArbreDR.md)
+          | 2        | ArbreDR.md                    | 57 - 79   | [ArbreDR.md](2CMP/ArbreDR.md#2---expression-booleene)
+          | 3        | ArbreDR.md                    | 80 - end  | [ArbreDR.md](2CMP/ArbreDR.md#3---expression-arithmétique)
 
 ## 3 AIT
 
@@ -29,7 +60,7 @@ This repository provide resources for AIT courses of Supinfo schools (3rd year a
  - into atom: `Maj+Ctl+P`, `Slime:Connect`
  
 
-### List of corrections available (lisp)
+### List of corrections available (lisp)
 
 In lisp folder :)
 
@@ -46,7 +77,7 @@ In lisp folder :)
 | TP 5      |          | easy_labs.lisp                     | 529 to 528  |
 | TP 6      |          | laby.lisp                          | Stand Alone |
 
-### List of correction (CAML -> All tps, in CAML :)
+### List of correction (CAML -> All tps, in CAML :)
 
 In CAML folder ;)
 
@@ -60,7 +91,7 @@ In CAML folder ;)
 | TP 5      |          | tree.ml         | Stand Alone |
 
 
-### List of correction (Pyhton -> All tps, in Python :)
+### List of correction (Pyhton -> All tps, in Python :)
 
 Guess where :p
 
@@ -76,7 +107,7 @@ Guess where :p
 
 ### Be ready for SOE
 
-| What    | Where      |
+| What    | Where      |
 | ------- | ---------- |
 | general | others.txt |
 | lisp    | lisp.lisp  |
@@ -87,7 +118,7 @@ Guess where :p
 TP_NOTE contain correction of the TP we had in 2016.
 rattrapage contain correction of the TP for 2d timer we had in 2016.
 
-## 4 AIT
+## 4 AIT
 
 ### Calcul logique
 
@@ -130,7 +161,7 @@ Get started contain all 'mini' exercises introducting prolog language in the cou
 
 # Nicer Sublime text
 
-- get `Seti UI` package
+- get `Seti UI` package
 - get `lisp indent` package
 
 # Nicer VSCode
