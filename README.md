@@ -15,6 +15,8 @@ This repository provide resources for AIT courses of Supinfo schools (3rd year a
 
 ### Labs Correction
 
+When codes have to be generated, I used `Makefile` to allow you to go through the compilations process. Think to use it (in general, you can just run `make` in the folder where the code is, and `make test` if the rules exist). 
+
 #### Part 1
 
 | TP Number | Tp Group | File to consult               | Lines     | Link                                                                        |
@@ -35,6 +37,10 @@ This repository provide resources for AIT courses of Supinfo schools (3rd year a
 | 5         | 1        | ArbreDR.md                    | 3 - 56    | [ArbreDR.md](2CMP/ArbreDR.md)                                               |
 |           | 2        | ArbreDR.md                    | 57 - 79   | [ArbreDR.md](2CMP/ArbreDR.md#2---expression-booleene)                       |
 |           | 3        | ArbreDR.md                    | 80 - end  | [ArbreDR.md](2CMP/ArbreDR.md#3---expression-arithmétique)                   |
+
+#### Part 2
+
+
 
 ## 3 AIT
 
