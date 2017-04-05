@@ -1,7 +1,9 @@
 #!/bin/bash
 
 file="$1"
-
+echo "1: $1 --- 2: $2"
+file2="${2:-$file}"
+echo "file2: $file2 --- file: $file"
 echo -e "Running copie.\n\nCopie should write the file you provided as argument in the stdout (provided file: <$file>)"
 echo
 echo "-------- Pgm output ----------"
@@ -67,6 +69,48 @@ echo -e "\n\nRunning compt class.\n\nShould show a message with the number of cl
 echo
 echo "-------- Pgm output ----------"
 ./compt_class "$file"
+echo "------------------------------"
+echo
+
+[[ $? -eq 0 ]] && echo "Looks good ?" || { echo "Execution fail"; exit 1; }
+
+echo -e "\n\nRunning filter comment.\n\nShould show the initial file without // single line comments (provide file <$file>) "
+echo
+echo "------- Initial file ---------"
+cat "$file2"
+echo
+echo "------------------------------"
+echo
+echo "-------- Pgm output ----------"
+./filt_sl_comment "$file2"
+echo "------------------------------"
+echo
+
+[[ $? -eq 0 ]] && echo "Looks good ?" || { echo "Execution fail"; exit 1; }
+
+echo -e "\n\nRunning filter comment.\n\nShould show the initial file without /* */ multi line comments (provide file <$file>) "
+echo
+echo "------- Initial file ---------"
+cat "$file2"
+echo
+echo "------------------------------"
+echo
+echo "-------- Pgm output ----------"
+./filt_ml_comment "$file2"
+echo "------------------------------"
+echo
+
+[[ $? -eq 0 ]] && echo "Looks good ?" || { echo "Execution fail"; exit 1; }
+
+echo -e "\n\nRunning filter comment.\n\nShould show only correctly formated " " (escape char is !) strings (provide file <$file>) "
+echo
+echo "------- Initial file ---------"
+cat "$file2"
+echo
+echo "------------------------------"
+echo
+echo "-------- Pgm output ----------"
+./filt_chars "$file2"
 echo "------------------------------"
 echo
 
