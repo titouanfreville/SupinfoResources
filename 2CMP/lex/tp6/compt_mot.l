@@ -3,13 +3,10 @@
 %}
 maj[A-Z]
 min[a-z]
-ponct[,;?!\.]
 sepliant[\-\_\.]
-others[^A-Za-z,;?!\.]
 %%
 ({maj}?{min}({min}*{sepliant}?{min}*)*)  {nbMot ++;}
-{ponct}                                  {;}
-{others}                                 {;}
+.|\n                                     {;}
 %%
 int main(int argc, char** argv)
 {

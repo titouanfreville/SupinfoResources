@@ -2,10 +2,9 @@
    int nbConsonne = 0; 
 %}
 consonne[b-df-hj-np-tv-xz]
-others[^b-df-hj-np-tv-xz]
 %%
 {consonne}  {nbConsonne ++;}
-{others}    {;}
+.|\n        {;}
 %%
 int main(int argc, char** argv)
 {

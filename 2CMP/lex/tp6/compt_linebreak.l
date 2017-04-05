@@ -3,7 +3,7 @@
 %}
 %%
 ["\n"] {lineBreak++;}
-[^\n]  {;}
+.|\n   {;}
 %%
 int main(int argc, char** argv)
 {

@@ -3,7 +3,7 @@
 %}
 %%
 [^ar\n]*   {nbChar+= yyleng;}
-[ar\n] {;}
+.|\n {;}
 %%
 int main(int argc, char** argv)
 {

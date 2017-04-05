@@ -5,12 +5,11 @@ maj[A-Z]
 min[a-z]
 ponct[,;?!\.\t: \-/]
 sepliant[\-\_\.]
-others[^A-Za-z,;?!\.\n\- ]
 %%
 ({maj}?{min}({min}*{sepliant}?{min}*)*)  {nbMot ++; nbChar+= yyleng;}
 {ponct}                                  {nbChar++;}
 [\n]                                     {nbLinebreak++;}
-{others}                                 {;}
+.|\n                                     {;}
 %%
 int main(int argc, char** argv)
 {

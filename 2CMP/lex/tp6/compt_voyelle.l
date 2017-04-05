@@ -2,10 +2,9 @@
    int nbVoyelle = 0; 
 %}
 voyelle[aeiouy]
-others[^aeiouy]
 %%
 {voyelle}  {nbVoyelle ++;}
-{others}   {;}
+.|\n       {;}
 %%
 int main(int argc, char** argv)
 {
