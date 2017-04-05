@@ -86,6 +86,22 @@ GB = (
 
 type 3 : règulière à gauche. (Mot -> Mot 0 | Mot 1)
 
+Autre solution :
+
+``` C
+    S --> 0|1B
+    B --> 0B|1B|*e*
+```
+
+type trois, régulière à droite
+
+```C
+    S --> 0B|1B
+    B --> 0B|1B|*e*
+```
+
+type trois, régulière à droite
+
 ### S -> aS | ab | ε est elle hors contexte ? Mot générée ?
 
 Non. Car S -> aS (grammaire régulière à droite).
