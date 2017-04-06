@@ -1,8 +1,8 @@
 default: genall compileall test
 
-genall: gen_copie gen_compt_voyelle gen_compt_consonne gen_compt_linebreak gen_compt_allchars gen_compt_chars_notarbreak gen_compt_class gen_filt_sl_comment gen_filt_ml_comment gen_filt_chars gen_copie_files gen_crypt gen_decrypt
+genall: gen_copie gen_compt_voyelle gen_compt_consonne gen_compt_linebreak gen_compt_allchars gen_compt_chars_notarbreak gen_compt_class gen_filt_sl_comment gen_filt_ml_comment gen_filt_chars gen_copie_files gen_crypt gen_decrypt gen_print_nb gen_calc
 
-compileall: compile_copie compile_compt_voyelle compile_compt_consonne compile_compt_linebreak compile_compt_allchars compile_compt_chars_notarbreak compile_compt_class compile_filt_sl_comment compile_filt_ml_comment compile_filt_chars compile_copie_files compile_crypt compile_decrypt
+compileall: compile_copie compile_compt_voyelle compile_compt_consonne compile_compt_linebreak compile_compt_allchars compile_compt_chars_notarbreak compile_compt_class compile_filt_sl_comment compile_filt_ml_comment compile_filt_chars compile_copie_files compile_crypt compile_decrypt compile_print_nb compile_calc
 
 # ########### TP 6 - 1 ########### #
 gen_copie: copie.l
@@ -71,7 +71,7 @@ gen_filt_chars: filt_chars.l
 
 compile_filt_chars: filt_chars.c
 	gcc -o filt_chars filt_chars.c
-# ########### ######## ########### #
+# ########### ######## ########### #compile_calc
 # ########### TP 6 - 3 ########### #
 gen_copie_files: copie_files.l
 	lex -o copie_files.c copie_files.l
@@ -91,11 +91,24 @@ gen_decrypt: decrypt.l
 compile_decrypt: decrypt.c
 	gcc -o decrypt decrypt.c
 # ########### ######## ########### #
+# ########### TP 6 - 4 ########### #
+gen_print_nb: affiche_nombre.l
+	lex -o print_nb.c affiche_nombre.l
+
+compile_print_nb: print_nb.c
+	gcc -o print_nb print_nb.c
+
+gen_calc: calculator.l
+	lex -o calc.c calculator.l
+
+compile_calc: calculator.l
+	gcc -o calc calc.c
+# ########### ######## ########### #
 # ########### # TEST # ########### #
 test: copie_from_lex compt_voyelle compt_consonne compt_mot compt_class filt_sl_comment copie_files
-	./test.sh makefile test.filt
+	./test.sh makefile test.filt test.filt.out test.calcs
 # ########### ######## ########### #
 # ###########  CLEAN   ########### #
 clean:
-	rm -rf *.c && find . -maxdepth 1 -type f -executable -exec rm {} +
+	rm -rf *.c && chmod -x test.sh && find . -maxdepth 1 -type f -executable -exec rm {} + && chmod +x test.sh
 # ########### ######## ########### #
