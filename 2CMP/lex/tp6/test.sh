@@ -6,10 +6,11 @@ file="$1"
 file2="${2:-$file}"
 file3="${3:-$file2}"
 file4="${4:-out.from.lex}"
+file5="${5:-$file3}"
 
 if [[ -z "$file" ]]
 then
-    echo -e "Usage: \t./test.sh file_for_tp_6_1 [file_for_tp_6_2] [file_in_for_tp_6_3] [file_out_for_tp_6_3]"
+    echo -e "Usage: \t./test.sh file_for_tp_6_1 [file_for_tp_6_2] [file_in_for_tp_6_3] [file_out_for_tp_6_3][file_for_tp_5]"
     exit 1
 fi
 
@@ -186,6 +187,15 @@ echo -e "Running calc.\n\nCalc from user input"
 echo
 echo "-------- Pgm output ----------"
 ./calc
+echo "------------------------------"
+echo
+
+[[ $? -eq 0 ]] && echo "Looks good ?" || { echo "Execution fail"; exit 1; }
+
+echo -e "Running pgm analysor.\n\nPrint operator, ... from <$file5>"
+echo
+echo "-------- Pgm output ----------"
+./pgm_analysor "$file5"
 echo "------------------------------"
 echo
 

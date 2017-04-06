@@ -1,0 +1,8 @@
+word := "Hello World"
+
+tant que NewBee
+Faire
+    si moon==red && country < Great
+    alors fuir
+    sinon rester
+fait
