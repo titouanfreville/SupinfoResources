@@ -2,4 +2,4 @@
 !*.l
 !makefile
 !.gitignore
-!test.sh
+!test*

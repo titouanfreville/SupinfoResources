@@ -1,9 +1,17 @@
 #!/bin/bash
 
+CRYPT_KEY=10
+
 file="$1"
-echo "1: $1 --- 2: $2"
 file2="${2:-$file}"
-echo "file2: $file2 --- file: $file"
+file3="${3:-$2}"
+file4="${4:-out.from.lex}"
+if [[ -z "$file" ]]
+then
+    echo -e "Usage: \t./test.sh file_for_tp_6_1 [file_for_tp_6_2] [file_in_for_tp_6_3] [file_out_for_tp_6_3]"
+    exit 1
+fi
+
 echo -e "Running copie.\n\nCopie should write the file you provided as argument in the stdout (provided file: <$file>)"
 echo
 echo "-------- Pgm output ----------"
@@ -111,6 +119,42 @@ echo "------------------------------"
 echo
 echo "-------- Pgm output ----------"
 ./filt_chars "$file2"
+echo "------------------------------"
+echo
+
+[[ $? -eq 0 ]] && echo "Looks good ?" || { echo "Execution fail"; exit 1; }
+
+echo -e "Running copie.\n\nCopie <$file3> in <$file4>)"
+echo
+echo > "$file4"
+echo "-------- Pgm output ----------"
+./copie_files "$file3" "$file4"
+echo "cat $file4"
+cat "$file4"
+echo "------------------------------"
+echo
+
+[[ $? -eq 0 ]] && echo "Looks good ?" || { echo "Execution fail"; exit 1; }
+
+echo -e "Running crypt.\n\Encrypting <$file3> in <$file3.crypt>)"
+echo
+echo > "$file3.crypt"
+echo "-------- Pgm output ----------"
+./crypt "$file3" "$file3.crypt" $CRYPT_KEY
+echo "cat $file3.crypt"
+cat "$file3.crypt"
+echo "------------------------------"
+echo
+
+[[ $? -eq 0 ]] && echo "Looks good ?" || { echo "Execution fail"; exit 1; }
+
+echo -e "Running crypt.\n\Decrypting <$file3.crypt> in <$file3.decrypt>)"
+echo
+echo > "$file3.decrypt"
+echo "-------- Pgm output ----------"
+./decrypt "$file3.crypt" "$file3.decrypt" $CRYPT_KEY
+echo "cat $file3.decrypt"
+cat "$file3.decrypt"
 echo "------------------------------"
 echo
 

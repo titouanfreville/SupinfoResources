@@ -1,10 +1,10 @@
 default: genall compileall test
 
-genall: gen_copie gen_compt_voyelle gen_compt_consonne gen_compt_linebreak gen_compt_allchars gen_compt_chars_notarbreak gen_compt_class gen_filt_sl_comment gen_filt_ml_comment gen_filt_chars
+genall: gen_copie gen_compt_voyelle gen_compt_consonne gen_compt_linebreak gen_compt_allchars gen_compt_chars_notarbreak gen_compt_class gen_filt_sl_comment gen_filt_ml_comment gen_filt_chars gen_copie_files gen_crypt gen_decrypt
 
-compileall: compile_copie compile_compt_voyelle compile_compt_consonne compile_compt_linebreak compile_compt_allchars compile_compt_chars_notarbreak compile_compt_class compile_filt_sl_comment compile_filt_ml_comment compile_filt_chars
+compileall: compile_copie compile_compt_voyelle compile_compt_consonne compile_compt_linebreak compile_compt_allchars compile_compt_chars_notarbreak compile_compt_class compile_filt_sl_comment compile_filt_ml_comment compile_filt_chars compile_copie_files compile_crypt compile_decrypt
 
-# ########### TP 6 - 1 ########### #
+# ########### TP 6 - 1 ########### #
 gen_copie: copie.l
 	lex -o copie_from_lex.c copie.l
 
@@ -52,8 +52,8 @@ gen_compt_class: compt_class.l
 
 compile_compt_class: compt_class.c
 	gcc -o compt_class compt_class.c
-# ########### ######## ########### #
-# ########### TP 6 - 2 ########### #
+# ########### ######## ########### #
+# ########### TP 6 - 2 ########### #
 gen_filt_sl_comment: filt_sl_comment.l
 	lex -o filt_sl_comment.c filt_sl_comment.l
 
@@ -71,8 +71,31 @@ gen_filt_chars: filt_chars.l
 
 compile_filt_chars: filt_chars.c
 	gcc -o filt_chars filt_chars.c
-# ########### ######## ########### #
-# ########### # TEST # ########### #
-test: copie_from_lex compt_voyelle compt_consonne compt_mot compt_class filt_sl_comment
+# ########### ######## ########### #
+# ########### TP 6 - 3 ########### #
+gen_copie_files: copie_files.l
+	lex -o copie_files.c copie_files.l
+
+compile_copie_files: copie_files.c
+	gcc -o copie_files copie_files.c
+
+gen_crypt: crypt.l
+	lex -o crypt.c crypt.l
+
+compile_crypt: crypt.c
+	gcc -o crypt crypt.c
+
+gen_decrypt: decrypt.l
+	lex -o decrypt.c decrypt.l
+
+compile_decrypt: decrypt.c
+	gcc -o decrypt decrypt.c
+# ########### ######## ########### #
+# ########### # TEST # ########### #
+test: copie_from_lex compt_voyelle compt_consonne compt_mot compt_class filt_sl_comment copie_files
 	./test.sh makefile test.filt
-# ########### ######## ########### #
+# ########### ######## ########### #
+# ###########  CLEAN   ########### #
+clean:
+	rm -rf *.c && find . -maxdepth 1 -type f -executable -exec rm {} +
+# ########### ######## ########### #
