@@ -7,10 +7,11 @@ file2="${2:-$file}"
 file3="${3:-$file2}"
 file4="${4:-out.from.lex}"
 file5="${5:-$file3}"
+file6="${6:-$file3}"
 
 if [[ -z "$file" ]]
 then
-    echo -e "Usage: \t./test.sh file_for_tp_6_1 [file_for_tp_6_2] [file_in_for_tp_6_3] [file_out_for_tp_6_3][file_for_tp_5]"
+    echo -e "Usage: \t./test.sh file_for_tp_6_1 [file_for_tp_6_2] [file_in_for_tp_6_3] [file_out_for_tp_6_3][file_for_tp_5][file_for_polish_checker]"
     exit 1
 fi
 
@@ -196,6 +197,24 @@ echo -e "Running pgm analysor.\n\nPrint operator, ... from <$file5>"
 echo
 echo "-------- Pgm output ----------"
 ./pgm_analysor "$file5"
+echo "------------------------------"
+echo
+
+[[ $? -eq 0 ]] && echo "Looks good ?" || { echo "Execution fail"; exit 1; }
+
+echo -e "Running polish syntax analysor - no automata.\n\nComment correctness of expression from <$file6>"
+echo
+echo "-------- Pgm output ----------"
+./polish_syntax_checker "$file6"
+echo "------------------------------"
+echo
+
+[[ $? -eq 0 ]] && echo "Looks good ?" || { echo "Execution fail"; exit 1; }
+
+echo -e "Running polish syntax analysor - with automata.\n\nComment correctness of expression from <$file6>"
+echo
+echo "-------- Pgm output ----------"
+./polish_syntax_checker_automate "$file6"
 echo "------------------------------"
 echo
 

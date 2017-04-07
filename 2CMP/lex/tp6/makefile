@@ -1,8 +1,8 @@
 default: genall compileall test
 
-genall: gen_copie gen_compt_voyelle gen_compt_consonne gen_compt_linebreak gen_compt_allchars gen_compt_chars_notarbreak gen_compt_class gen_filt_sl_comment gen_filt_ml_comment gen_filt_chars gen_copie_files gen_crypt gen_decrypt gen_print_nb gen_calc gen_pgm_analysor
+genall: gen_copie gen_compt_voyelle gen_compt_consonne gen_compt_linebreak gen_compt_allchars gen_compt_chars_notarbreak gen_compt_class gen_filt_sl_comment gen_filt_ml_comment gen_filt_chars gen_copie_files gen_crypt gen_decrypt gen_print_nb gen_calc gen_pgm_analysor gen_polish_syntax_checker_automate gen_polish_syntax_checker
 
-compileall: compile_copie compile_compt_voyelle compile_compt_consonne compile_compt_linebreak compile_compt_allchars compile_compt_chars_notarbreak compile_compt_class compile_filt_sl_comment compile_filt_ml_comment compile_filt_chars compile_copie_files compile_crypt compile_decrypt compile_print_nb compile_calc compile_pgm_analysor
+compileall: compile_copie compile_compt_voyelle compile_compt_consonne compile_compt_linebreak compile_compt_allchars compile_compt_chars_notarbreak compile_compt_class compile_polish_syntax_checker compile_filt_sl_comment compile_filt_ml_comment compile_filt_chars compile_copie_files compile_crypt compile_decrypt compile_print_nb compile_calc compile_pgm_analysor compile_polish_syntax_checker_automate
 
 # ########### TP 6 - 1 ########### #
 gen_copie: copie.l
@@ -112,9 +112,23 @@ gen_pgm_analysor: pgm_analysor.l
 compile_pgm_analysor: pgm_analysor.l
 	gcc -o pgm_analysor pgm_analysor.c
 # ########### ######## ########### #
+# ########### TP 6 - 6 ########### #
+gen_polish_syntax_checker: polish_syntax_checker.l
+	lex -o polish_syntax_checker.c polish_syntax_checker.l
+
+compile_polish_syntax_checker: polish_syntax_checker.l
+	gcc -o polish_syntax_checker polish_syntax_checker.c
+# ########### ######## ########### #
+# ########### TP 6 - 7 ########### #
+gen_polish_syntax_checker_automate: polish_syntax_checker_automate.l
+	lex -o polish_syntax_checker_automate.c polish_syntax_checker_automate.l
+
+compile_polish_syntax_checker_automate: polish_syntax_checker_automate.l
+	gcc -o polish_syntax_checker_automate polish_syntax_checker_automate.c
+# ########### ######## ########### #
 # ########### # TEST # ########### #
-test: copie_from_lex compt_voyelle compt_consonne compt_mot compt_class filt_sl_comment copie_files
-	./test.sh makefile makefile test.filt test.filt.out test.pgm
+test: copie_from_lex compt_voyelle compt_consonne compt_mot compt_class filt_sl_comment copie_files polish_syntax_checker_automate polish_syntax_checker
+	./test.sh makefile makefile test.filt test.filt.out test.pgm test.calcs
 # ########### ######## ########### #
 # ###########  CLEAN   ########### #
 clean:
