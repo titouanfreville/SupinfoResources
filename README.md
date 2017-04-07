@@ -40,6 +40,29 @@ When codes have to be generated, I used `Makefile` to allow you to go through th
 
 #### Part 2
 
+| TP Number | Tp Group | File to consult (base: lex_yacc/tp6) | Link                                                                        |
+| --------- | -------- | ------------------------------------ | --------------------------------------------------------------------------- |
+|  6-1      | 1        | 1/copie.l                            | [copie.l](2CMP/lex_yacc/tp6/1/copie.l)                                      |
+|           | 2        | 1/compt_voyelle.l                    | [compt_voyelle.l](2CMP/lex_yacc/tp6/1/compt_voyelle.l)                      |
+|           | 3        | 1/compt_consonne.l                   | [compt_consonne.l](2CMP/lex_yacc/tp6/1/compt_consonne.l)                    |
+|           | 4        | 1/compt_mot.l                        | [compt_mot.l](2CMP/lex_yacc/tp6/1/compt_mot.l)                              |
+|           | 5        | 1/compt_linebreak.l                  | [compt_linebreak.l](2CMP/lex_yacc/tp6/1/compt_linebreak.l)                  |
+|           | 6        | 1/compt_allchars.l                   | [compt_allchars.l](2CMP/lex_yacc/tp6/1/compt_allchars.l)                    |
+|           | 7        | 1/compt\_chars\_notarbreak.l         | [compt_chars_notarbreak.l](2CMP/lex_yacc/tp6/1/compt_chars_notarbreak.l)    |
+|           | 8        | 1/compt_class.l                      | [compt_class.l](2CMP/lex_yacc/tp6/1/compt_class.l)                          |
+|  6-2      | 1        | 2/filt\_sl\_comment.l                | [filt_sl_comment.l](2CMP/lex_yacc/tp6/2/filt_sl_comment.l)                  |
+|           | 2        | 2/filt\_ml\_comment.l                | [filt_ml_comment.l](2CMP/lex_yacc/tp6/2/filt_ml_comment.l)                  |
+|           | 3        | 2/filt_chars.l                       | [filt_chars.l](2CMP/lex_yacc/tp6/2/filt_chars.l)                            |
+|  6-3      | 1        | 3/copie_files.l                      | [copie_files.l](2CMP/lex_yacc/tp6/3/copie_files.l)                          |
+|           | 2        | 3/crypt.l                            | [crypt.l](2CMP/lex_yacc/tp6/3/crypt.l)                                      |
+|           | 3        | 3/decrypt.l                          | [decrypt.l](2CMP/lex_yacc/tp6/3/decrypt.l)                                  |
+|  6-4      | 1        | 4/affiche_nombre.l                   | [affiche_nombre.l](2CMP/lex_yacc/tp6/4/affiche_nombre.l)                    |
+|           | 2-3-4    | 4/calculator.l                       | [calculator.l](2CMP/lex_yacc/tp6/4/calculator.l)                            |
+|  6-5      |          | 5/pgm_analysor.l                     | [pgm_analysor.l](2CMP/lex_yacc/tp6/5/pgm_analysor.l)                        |
+|  6-6      |          | 6/polish_syntax_checker.l            | [polish.l](2CMP/lex_yacc/tp6/6/polish_syntax_checker.l)                     |
+|  6-7      |          | 7/polish_syntax_checker_automate.l   | [polish_automate.l](2CMP/lex_yacc/tp6/7/polish_syntax_checker_automate.l)   |
+
+
 
 
 ## 3 AIT
