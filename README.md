@@ -62,9 +62,6 @@ When codes have to be generated, I used `Makefile` to allow you to go through th
 |  6-6      |          | 6/polish_syntax_checker.l            | [polish.l](2CMP/lex_yacc/tp6/6/polish_syntax_checker.l)                     |
 |  6-7      |          | 7/polish_syntax_checker_automate.l   | [polish_automate.l](2CMP/lex_yacc/tp6/7/polish_syntax_checker_automate.l)   |
 
-
-
-
 ## 3 AIT
 
 ### Working environement
