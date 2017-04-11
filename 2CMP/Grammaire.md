@@ -178,3 +178,133 @@ N -> N0 | N1 | N2 | N3 | N4 | N5 | N6 | N7 | N8 | N9
 ### Fini ?
 
 Dans le sens ou la grammaire défini ne contient que les 4 opérateurs, les (), l'espace et les chiffres, l'automates est finis.
+
+# TP 7 - Nouvelles Grammaires de l'analyse syntaxique
+
+## 2 - Conception de grammaire && exécution de séquences
+
+### Donnez G1 la grammaire récursive a droite engeandrant le langage des multiplication
+
+```OCaml
+Expr -> nb * Fact
+Fact -> nb * Fact
+Fact -> nb
+```
+
+#### Donnez la table syntaxique correspondante
+
+- Calcul d'ε : Pas de ε règles, donc pas ε(G) est null 
+- Calcul des Premiers :
+    - Premier( nb * Fact ) = nb *
+    - Premier( nb ) = nb
+- table:
+
+|      | nb *               | nb         |
+| -----| ------------------ | ---------- |
+| Expr |  Expr -> nb * Fact |            |
+| Fact |  Fact -> nb * Fact | Fact -> nb |
+
+<!-- Calcul ex 1*5*5 -->
+```Ocaml
+1*5*5 -> Expr.
+Premier(1*5*5) = 1*
+Expr(nb * ) -> nb * Fact
+```
+
+pile:
+
+|    |
+|----|
+| 1* |
+| $  |
+
+```Ocaml
+5*5 -> Fact.
+Premier(5*5) = 5*
+Fact(nb * ) -> nb*Fact
+```
+
+pile:
+
+|    |
+|----|
+| 5* |
+| 1* |
+| $  |
+
+```Ocaml
+5 -> Fact.
+Premier(5) = 5
+Fact(nb) -> nb
+```
+
+pile:
+
+|    |
+|----|
+| 5  |
+| 5* |
+| 1* |
+| $  |
+
+<!-- Calcul ex 1*2+2*3  -->
+
+```Ocaml
+1*2+2*3 -> Expr.
+Premier(1*2+2*3) = 1*
+Expr(nb * ) -> nb * Fact
+```
+
+pile:
+
+|    |
+|----|
+| 1* |
+| $  |
+
+```Ocaml
+2+2*3 -> Fact.
+Premier(2+) = 2+
+Fact(nb + ) -> NO RULES
+```
+
+pile:
+
+|    |
+|----|
+| 1* |
+| $  |
+
+### Donnez la grammaire G2 rec à droite -> arithmétique addition && mult. 
+
+```OCaml
+Expr -> (Expr)
+Expr -> Expr * Fact
+Expr -> Expr + Sum
+Fact -> Sum * Fact
+Fact -> Sum
+Fact -> (Fact)
+Sum -> nb
+Sum -> (Sum)
+Sum -> nb + Sum
+```
+
+#### Table synt
+
+```Ocaml
+Premier( (Expr) ) = (
+Premier( Expr * Fact ) = Expr *
+Premier( Expr + Sum ) = Expr +
+Premier( Sum * Fact ) = Sum *
+Premier( Sum ) = Sum
+Premier( (Fact) ) = (
+Premier( nb ) = nb
+Premier( (Sum) ) = (
+Premier( nb + Sum ) = nb +
+```
+
+|      | (                | nb        | Sum         | Expr *              | Sum *              | Expr +             | nb +            |
+|------|------------------|-----------|-------------|---------------------|--------------------|--------------------|-----------------|
+| Expr | Expr -> ( Expr ) |           |             | Expr -> Expr * Fact |                    | Expr -> Expr + Sum |                 |
+| Fact | Fact -> ( Fact ) |           | Fact -> Sum |                     | Fact -> Sum * Fact |                    |                 |
+| Sum  | Sum -> ( Sum )   | Sum -> nb |             |                     |                    |                    | Sum -> nb + Sum |
