@@ -275,12 +275,13 @@ pile:
 | 1* |
 | $  |
 
-### Donnez la grammaire G2 rec à droite -> arithmétique addition && mult. 
+### Donnez la grammaire G2 rec à droite -> arithmétique addition && mult
 
 ```OCaml
 Expr -> (Expr)
-Expr -> Expr * Fact
-Expr -> Expr + Sum
+Expr -> Fact * Expr
+Expr -> Fact + Expr
+Expr -> Fact
 Fact -> Sum * Fact
 Fact -> Sum
 Fact -> (Fact)
@@ -293,8 +294,8 @@ Sum -> nb + Sum
 
 ```Ocaml
 Premier( (Expr) ) = (
-Premier( Expr * Fact ) = Expr *
-Premier( Expr + Sum ) = Expr +
+Premier( Fact * Expr ) = Fact *
+Premier( Fact + Expr ) = Fact +
 Premier( Sum * Fact ) = Sum *
 Premier( Sum ) = Sum
 Premier( (Fact) ) = (
@@ -303,8 +304,84 @@ Premier( (Sum) ) = (
 Premier( nb + Sum ) = nb +
 ```
 
-|      | (                | nb        | Sum         | Expr *              | Sum *              | Expr +             | nb +            |
+|      | (                | nb        | Sum         | Fact *              | Sum *              | Fact +             | nb +            |
 |------|------------------|-----------|-------------|---------------------|--------------------|--------------------|-----------------|
-| Expr | Expr -> ( Expr ) |           |             | Expr -> Expr * Fact |                    | Expr -> Expr + Sum |                 |
+| Expr | Expr -> ( Expr ) |           |             | Expr -> Fact * Expr |                    | Expr -> Sum + Expr |                 |
 | Fact | Fact -> ( Fact ) |           | Fact -> Sum |                     | Fact -> Sum * Fact |                    |                 |
 | Sum  | Sum -> ( Sum )   | Sum -> nb |             |                     |                    |                    | Sum -> nb + Sum |
+
+<!-- Calcul (1*5*5) -->
+```Ocaml
+(1*5*5) -> Expr
+Premier (1*5*5) = (
+Expr -> (Expr)
+```
+
+pile:
+
+|    |
+|----|
+| )  |
+|Expr|
+| (  |
+| $  |
+
+```Ocaml
+1*5*5) -> Expr
+Premier 1*5*5) = 1*
+Expr * -> Fact * Expr
+```
+
+pile:
+
+|    |
+|----|
+| )  |
+|Expr|
+|*   |
+|Fact|
+| (  |
+| $  |
+
+```Ocaml
+1 -> Fact
+5*5) -> Expr
+Premier 1 = 1
+Premier 5*5) = 5*
+Fact -> Sum -> nb
+Expr -> Fact * Expr
+```
+
+pile:
+
+|    |
+|----|
+| )  |
+|Expr|
+|Fact|
+|*   |
+|nb=1|
+| (  |
+| $  |
+
+```Ocaml
+5 -> Fact
+5) -> Expr
+Premier 5 = 5
+Premier 5) = 5
+Fact -> Sum -> nb
+Expr -> Fact -> Sum -> nb
+```
+
+pile:
+
+|    |
+|----|
+| )  |
+|nb=5|
+|*   |
+|nb=5|
+|*   |
+|nb=1|
+| (  |
+| $  |
