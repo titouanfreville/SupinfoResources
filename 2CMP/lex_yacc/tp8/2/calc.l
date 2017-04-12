@@ -19,4 +19,3 @@
 \n       /* don't like whitelines*/
 [ \t]+   /* same goes for whitespace*/
 %%
-// int yywrap (void) {return 1;}

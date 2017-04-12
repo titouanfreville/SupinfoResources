@@ -9,8 +9,11 @@
 expr_calcs: expr_calc | expr_calcs expr_calc;
 expr_calc: expr_num EQUAL
            {
-              printf("%d\n", $$);
-           } | EXIT {YYACCEPT;};
+              printf("%d\n\n", $$);
+           } 
+           | EXIT {YYACCEPT;} 
+           | error '\n' {yyerrok;} 
+           | error EQUAL {yyerrok;};
 expr_num: facteur 
           | expr_num ADD facteur 
             {
