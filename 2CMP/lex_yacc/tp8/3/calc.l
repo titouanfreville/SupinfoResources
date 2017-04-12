@@ -5,7 +5,9 @@
     extern YYSTYPE yylval;
 %}
 %%
-[0-9]+   yylval=atoi(yytext); return NB;
+[0-9]+   {yylval=atoi(yytext); return NB;}
+(neg)    return OPPOSE;
+(abs)    return ABS;
 [=]      return EQUAL;
 [-]      return MINUS;
 [+]      return ADD;
