@@ -2,8 +2,8 @@
    int lineBreak = 0; 
 %}
 %%
-["\n"] {lineBreak++;}
-.|\n   {;}
+["\n"] lineBreak++;
+.|\n
 %%
 int main(int argc, char** argv)
 {

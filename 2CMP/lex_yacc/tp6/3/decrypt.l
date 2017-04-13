@@ -7,8 +7,8 @@
     int charasint;
 %}
 %%
-[\n] {fprintf(out, "%s\n", line); strcpy(line, ""); line[0]= '\0';}
-. {charasint=yytext[0]; store[0]= charasint-key; strcat(line, store);}
+[\n] fprintf(out, "%s\n", line); strcpy(line, ""); line[0]= '\0';
+.    charasint=yytext[0]; store[0]= charasint-key; strcat(line, store);
 %%
 int main(int argc, char** argv)
 {

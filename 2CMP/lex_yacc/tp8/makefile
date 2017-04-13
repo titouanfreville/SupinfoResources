@@ -1,8 +1,8 @@
 all: init gen_all compile_all test
 
-gen_all: gen_calc1 gen_calc3
+gen_all: gen_calc1 gen_calc2 gen_calc3 gen_calc4
 
-compile_all: cmp_calc1 cmp_calc3
+compile_all: cmp_calc1 cmp_calc2 cmp_calc3 cmp_calc4
 
 init:
 	-mkdir compiled 1> /dev/null 3> /dev/null > /dev/null
@@ -30,6 +30,14 @@ gen_calc3: 3/calc.y 3/calc.y
 
 cmp_calc3: 3/calc_stx.c 3/calc_grm.c
 	gcc -o compiled/calc3.bin 3/calc_stx.c 3/calc_grm.c
+# ##########################################
+# TP 8-4 ###################################
+gen_calc4: 4/calc.y 4/calc.y
+	lex -o 4/calc_stx.c 4/calc.l && \
+	yacc -d -o 4/calc_grm.c 4/calc.y
+
+cmp_calc4: 4/calc_stx.c 4/calc_grm.c
+	gcc -o compiled/calc4.bin 4/calc_stx.c 4/calc_grm.c
 # ##########################################
 
 test: 

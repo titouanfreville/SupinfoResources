@@ -3,8 +3,8 @@
 %}
 consonne[b-df-hj-np-tv-xz]
 %%
-{consonne}  {nbConsonne ++;}
-.|\n        {;}
+{consonne}  nbConsonne ++;
+.|\n 
 %%
 int main(int argc, char** argv)
 {

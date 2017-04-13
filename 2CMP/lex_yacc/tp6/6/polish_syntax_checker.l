@@ -9,11 +9,11 @@ chiffre[0-9]
 op[+*-/]
 notvalid[^ 0-9+*-/()\n]
 %%
-\( {nbPOuv++;}
-\) {nbPFem++;}
-{notvalid} {printf("Error: Symbol <%s> is not valid\n", yytext);};
-{op}       {nbOpp++;}
-{chiffre}    {nbVar++;}
+\( nbPOuv++;
+\) nbPFem++;
+{notvalid} printf("Error: Symbol <%s> is not valid\n", yytext);
+{op}       nbOpp++;
+{chiffre}  nbVar++;
 [\n] {
         if (nbPOuv != nbPFem) {
             printf("Error: Parenthèse are not matched\n"); 

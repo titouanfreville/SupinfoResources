@@ -3,8 +3,8 @@
 %}
 voyelle[aeiouy]
 %%
-{voyelle}  {nbVoyelle ++;}
-.|\n       {;}
+{voyelle}  nbVoyelle ++;
+.|\n
 %%
 int main(int argc, char** argv)
 {

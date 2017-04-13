@@ -1,6 +1,6 @@
 %%
-\"((!\")?[^\"](!\")?)*\"    {ECHO; printf("\n");}
-.|\n {;}
+\"((!\")?[^\"](!\")?)*\"    ECHO; printf("\n");
+.|\n
 %%
 int main(int argc, char** argv)
 {

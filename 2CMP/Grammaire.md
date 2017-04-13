@@ -385,3 +385,17 @@ pile:
 |nb=1|
 | (  |
 | $  |
+
+### Grammaire LR
+
+```OCaml
+G:
+E' -> .E
+E -> .E+T
+E -> .T
+T -> .T*F
+T -> .(E)
+F -> .(id)
+```
+
+#### Automate Déterministe

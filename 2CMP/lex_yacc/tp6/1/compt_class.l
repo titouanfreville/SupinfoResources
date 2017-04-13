@@ -3,13 +3,14 @@
 %}
 maj[A-Z]
 min[a-z]
-ponct[,;?!\.\t: \-/]
-sepliant[\-\_\.]
+ponct[,;?!.:\-"']
+sepliant[-_.]
+mot({maj}?{min}({min}*{sepliant}?{min}*)*)
 %%
-({maj}?{min}({min}*{sepliant}?{min}*)*)  {nbMot ++; nbChar+= yyleng;}
-{ponct}                                  {nbChar++;}
-[\n]                                     {nbLinebreak++;}
-.|\n                                     {;}
+{mot}       nbMot ++; nbChar+= yyleng;
+{ponct}     nbChar++;
+[\n]        nbLinebreak++;
+.|\n        /**/
 %%
 int main(int argc, char** argv)
 {

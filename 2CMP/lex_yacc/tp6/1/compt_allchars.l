@@ -2,8 +2,8 @@
     long int nbChar = 0;
 %}
 %%
-.*   {nbChar+= yyleng;}
-.|\n {;}
+.*   nbChar+= yyleng;
+.|\n /* nothing to do here */
 %%
 int main(int argc, char** argv)
 {

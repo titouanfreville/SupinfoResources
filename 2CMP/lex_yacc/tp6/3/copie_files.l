@@ -4,8 +4,8 @@
     char line[10000];
 %}
 %%
-[\n] {fprintf(out, "%s\n", line); strcpy(line, ""); line[0]= '\0';}
-.* {strcpy(line, yytext);}
+[\n] fprintf(out, "%s\n", line); strcpy(line, ""); line[0]= '\0';
+.*   strcpy(line, yytext);
 %%
 int main(int argc, char** argv)
 {

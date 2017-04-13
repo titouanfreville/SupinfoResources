@@ -32,10 +32,10 @@
 %option noyywrap
 operateur[\*\+-\/]
 %% 
-[0-9]+      {var[ivar]=atoi(yytext); ivar++;}
-{operateur} {op[iop]=yytext[0]; iop++;}
-=           {printf("%d\n\n", calc(var, op, ivar, iop)); ivar=0; iop=0;}
-[\n][\n]    {printf("See you later\n"); yyterminate();}
+[0-9]+      var[ivar]=atoi(yytext); ivar++;
+{operateur} op[iop]=yytext[0]; iop++;
+=           printf("%d\n\n", calc(var, op, ivar, iop)); ivar=0; iop=0;
+[\n][\n]    printf("See you later\n"); yyterminate();
 .|\n
 %% 
 int main(void) {
