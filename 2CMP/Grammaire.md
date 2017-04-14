@@ -181,6 +181,8 @@ Dans le sens ou la grammaire défini ne contient que les 4 opérateurs, les (), 
 
 # TP 7 - Nouvelles Grammaires de l'analyse syntaxique
 
+## 1 - Grammaire LL
+
 ## 2 - Conception de grammaire && exécution de séquences
 
 ### Donnez G1 la grammaire récursive a droite engeandrant le langage des multiplication
@@ -386,7 +388,7 @@ pile:
 | (  |
 | $  |
 
-### Grammaire LR
+## 3 - Grammaire LR
 
 ```OCaml
 G:

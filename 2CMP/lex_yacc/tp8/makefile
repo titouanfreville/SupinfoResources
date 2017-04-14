@@ -32,7 +32,7 @@ cmp_calc3: 3/calc_stx.c 3/calc_grm.c
 	gcc -o compiled/calc3.bin 3/calc_stx.c 3/calc_grm.c
 # ##########################################
 # TP 8-4 ###################################
-gen_calc4: 4/calc.y 4/calc.y
+gen_calc4: 4/calc.y 4/calc.l
 	lex -o 4/calc_stx.c 4/calc.l && \
 	yacc -d -o 4/calc_grm.c 4/calc.y
 

@@ -4,10 +4,10 @@
     int nNb = 0;
     char buffer[10000] = "";
 %}
-space[ ]
-chiffre[0-9]
-op[+*-/]
-notvalid[^ 0-9+*-/()\n]
+space [ ]
+chiffre [0-9]
+op [+*-/]
+notvalid [^ 0-9+*-/()\n]
 %s Operator Numbers FINAL
 %%
 <INITIAL>\(              strcat(buffer, yytext); strcat(buffer, " "); pMisMatched++; BEGIN(INITIAL);

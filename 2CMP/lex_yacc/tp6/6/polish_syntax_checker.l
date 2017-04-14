@@ -4,10 +4,10 @@
     int nbOpp = 0;
     int nbVar = 0;
 %}
-space[ ]
-chiffre[0-9]
-op[+*-/]
-notvalid[^ 0-9+*-/()\n]
+space [ ]
+chiffre [0-9]
+op [+*-/]
+notvalid [^ 0-9+*-/()\n]
 %%
 \( nbPOuv++;
 \) nbPFem++;

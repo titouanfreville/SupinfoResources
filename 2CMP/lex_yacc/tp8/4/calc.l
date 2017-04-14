@@ -8,7 +8,6 @@ nombre [0-9]+
 signe [=\-+*/()]
 %%
 {nombre}   yylval=atoi(yytext); return NB;
-{signe}[-] return OPPOSE;
 [=]        return EQUAL;
 [-]        return MINUS;
 [+]        return ADD;

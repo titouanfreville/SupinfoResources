@@ -7,6 +7,7 @@
 %token NB ADD MULT MINUS DIV EQUAL LBR RBR EXIT OPPOSE
 %%
 exprs: expr | exprs expr;
+
 expr:   
         calc EQUAL {printf("%d\n\n", $$);} |
         EXIT {YYACCEPT;} |
@@ -15,13 +16,13 @@ expr:
 
 calc:
         term |
-        expr ADD term {$$=$1+$3;} |
-        expr MINUS term {$$=$1-$3;} |
-        expr MULT term {$$=$1*$3;} |
-        expr DIV term {$$=$1/$3;};
+        calc ADD term {$$=$1+$3;} |
+        calc MINUS term {$$=$1-$3;} |
+        calc MULT term {$$=$1*$3;} |
+        calc DIV term {$$=$1/$3;};
 term: 
-        OPPOSE expr {$$=-$2;} |
-        LBR expr RBR {$$=$2;} |
+        |
+        LBR calc RBR {$$=$2;} |
         NB {$$=$1;};
 
 %%

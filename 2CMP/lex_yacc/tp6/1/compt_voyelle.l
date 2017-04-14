@@ -1,7 +1,7 @@
 %{
    int nbVoyelle = 0; 
 %}
-voyelle[aeiouy]
+voyelle [aeiouy]
 %%
 {voyelle}  nbVoyelle ++;
 .|\n

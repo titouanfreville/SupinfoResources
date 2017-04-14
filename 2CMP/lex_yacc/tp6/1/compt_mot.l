@@ -1,10 +1,10 @@
 %{
    int nbMot = 0; 
 %}
-maj[A-Z]
-min[a-z]
-sepliant[-_.]
-mot({maj}?{min}({min}*{sepliant}?{min}*)*)
+maj [A-Z]
+min [a-z]
+sepliant [-_.]
+mot ({maj}?{min}({min}*{sepliant}?{min}*)*)
 %%
 {mot}  nbMot ++;
 .|\n

@@ -1,7 +1,7 @@
 %{
    int nbConsonne = 0; 
 %}
-consonne[b-df-hj-np-tv-xz]
+consonne [b-df-hj-np-tv-xz]
 %%
 {consonne}  nbConsonne ++;
 .|\n 
