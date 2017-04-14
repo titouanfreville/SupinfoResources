@@ -195,59 +195,24 @@ Fact -> nb
 
 #### Donnez la table syntaxique correspondante
 
-- Calcul d'ε : Pas de ε règles, donc pas ε(G) est null 
-- Calcul des Premiers :
-    - Premier( nb * Fact ) = nb *
-    - Premier( nb ) = nb
 - table:
 
-|      | nb *               | nb         |
-| -----| ------------------ | ---------- |
-| Expr |  Expr -> nb * Fact |            |
-| Fact |  Fact -> nb * Fact | Fact -> nb |
+|   | *  | nb  | $   | | Fact |
+|---|----|-----|-----|-|------|
+| 0 |    | s1  | acc | |      |
+| 1 | s2 |     | acc | | 3    |
+| 3 |    | r0  |     | |      |
 
 <!-- Calcul ex 1*5*5 -->
 ```Ocaml
-1*5*5 -> Expr.
-Premier(1*5*5) = 1*
-Expr(nb * ) -> nb * Fact
+1*5*5
+
+1 nb. s1
+
+1: *5*5
+* *. 5*5 Fact
+
 ```
-
-pile:
-
-|    |
-|----|
-| 1* |
-| $  |
-
-```Ocaml
-5*5 -> Fact.
-Premier(5*5) = 5*
-Fact(nb * ) -> nb*Fact
-```
-
-pile:
-
-|    |
-|----|
-| 5* |
-| 1* |
-| $  |
-
-```Ocaml
-5 -> Fact.
-Premier(5) = 5
-Fact(nb) -> nb
-```
-
-pile:
-
-|    |
-|----|
-| 5  |
-| 5* |
-| 1* |
-| $  |
 
 <!-- Calcul ex 1*2+2*3  -->
 
@@ -392,12 +357,24 @@ pile:
 
 ```OCaml
 G:
-E' -> .E
-E -> .E+T
-E -> .T
-T -> .T*F
-T -> .(E)
-F -> .(id)
+E' -> E
+E -> E+T
+E -> T
+T -> F
+T -> T*F
+F -> (E)
+F -> id
 ```
 
 #### Automate Déterministe
+
+![](images/automate_lr.png)
+
+#### Table d'analyse
+
+|  | ε       | | |
+|--|---------|-|-|
+|E'| E' -> E |
+|E | E -> T  |
+|T | T -> F  |
+|F |         |
