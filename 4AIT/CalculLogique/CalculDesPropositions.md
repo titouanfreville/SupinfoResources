@@ -74,6 +74,7 @@ a <=> a
 ### Donner une formule élémentaire toujours fausse
 
 a => ¬a
+
 a ∧ ¬a
 
 ### Déduire ε des formules suivantes
@@ -95,7 +96,17 @@ formules:
 
 ### Montrer par réfutation la proposition : 
 
+```
 (( ( a => (b ∨ c)) ∧ ((b ∨ d) => (e ∧ f)) ) ∧ ¬e ) => (a => c)
+
+¬[ (( ( a => (b ∨ c)) ∧ ((b ∨ d) => (e ∧ f)) ) ∧ ¬e ) => (a => c) ]
+¬[ ¬(( ( a => (b ∨ c)) ∧ ((b ∨ d) => (e ∧ f)) ) ∧ ¬e )  ∨ (a => c) ]
+¬[ ¬(( ( ¬a ∨ (b ∨ c)) ∧ (¬(b ∨ d) ∨ (e ∧ f)) ) ∧ ¬e )  ∨ (¬a ∨ c) ]
+(( ( ¬a ∨ (b ∨ c)) ∧ (¬(b ∨ d) ∨ (e ∧ f)) ) ∧ ¬e ) ∧ ¬(¬a ∨ c)
+((( ¬a ∨ b ∨ c) ∧ ((¬b ∨ e)∧(¬b ∨ f) ∨ (¬d ∨ e)∧(¬d ∨ f))) ∧ ¬e ) ∧ a ∧ ¬c
+
+arbre:
+```
 
 
 ### L'expression {a=>b, c=>b} ⊧ (a ∨ c) => b satisfiable ?
