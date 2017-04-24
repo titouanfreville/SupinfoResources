@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   id="svg3457"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="raisonement_seul.svg">
+  <defs
+     id="defs3459" />
+  <sodipodi:namedview
+     inkscape:document-units="mm"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.525169"
+     inkscape:cx="416.68032"
+     inkscape:cy="609.05766"
+     inkscape:current-layer="layer1"
+     id="namedview3461"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3463">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="117.52385"
+       y="10.145044"
+       id="text3421"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3423"
+         x="117.52385"
+         y="10.145044"
+         style="font-size:8.46666672px">ε ⊧ ¬retard</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.32892197px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 103.35344,12.682722 99.39139,-0.277575 z"
+       id="path3427"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-20.238159"
+       y="24.646584"
+       id="text3429"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3431"
+         x="-20.238159"
+         y="24.646584"
+         style="font-size:8.46666718px">¬retard,  (tram ∨ voiture) =&gt; (retard ∧ ¬reunion) ⊧ (tram ∨ voiture) =&gt;  FAUX</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.59648854px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M -18.261086,30.110564 312.21514,29.836025 Z"
+       id="path3427-4"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="42.45406"
+       y="40.721157"
+       id="text3535"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3537"
+         x="42.45406"
+         y="40.721157"
+         style="font-size:8.46666718px"> (tram ∨ voiture) =&gt; FAUX ⊧ ¬ (tram ∨ voiture) </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1.0747894"
+       y="53.0812"
+       id="text3539"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3541"
+         x="1.0747894"
+         y="53.0812"
+         style="font-size:8.46666718px">¬ (tram ∨ voiture),  seul =&gt; (moto ∨ tram)  ⊧ seul =&gt; (moto ∨ FAUX) </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="105.86645"
+       y="62.754272"
+       id="text3543"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3545"
+         x="105.86645"
+         y="62.754272"
+         style="font-size:8.46666672px">seul =&gt; moto</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.56743258px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0.01067026,44.620315 298.77992,44.345504 Z"
+       id="path3427-4-7"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.28864014px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 101.04385,55.370025 177.3258,55.09152 Z"
+       id="path3427-4-7-3"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
