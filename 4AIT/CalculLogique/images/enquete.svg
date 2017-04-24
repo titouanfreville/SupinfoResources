@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="594mm"
+   height="420mm"
+   viewBox="0 0 2104.7244 1488.189"
+   id="svg3611"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="enquete.svg">
+  <defs
+     id="defs3613" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.40651365"
+     inkscape:cx="541.65482"
+     inkscape:cy="815.97039"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3616">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,435.82669)">
+    <g
+       id="g4697"
+       transform="translate(17.394417,-608.80458)"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <text
+         sodipodi:linespacing="125%"
+         id="text3658"
+         y="128.83788"
+         x="599.96936"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="128.83788"
+           x="599.96936"
+           id="tspan3660"
+           sodipodi:role="line"></tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3662"
+         y="1033.0775"
+         x="212.13203"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="1033.0775"
+           x="212.13203"
+           id="tspan3664"
+           sodipodi:role="line">((A∨B) =&gt; ¬(C∧D)) ∧ (A =&gt; ¬(B∧E)) ∧ (C =&gt; ¬(D∧E))</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path3623-1"
+         d="M -261.70113,993.81598 1699.4851,990.91455 Z"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.28281689px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3733"
+         y="876.65686"
+         x="38.569462"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="876.65686"
+           x="38.569462"
+           id="tspan3735"
+           sodipodi:role="line"></tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3770"
+         y="778.09045"
+         x="-126.42213"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="778.09045"
+           x="-126.42213"
+           id="tspan3772"
+           sodipodi:role="line" /></text>
+      <g
+         transform="translate(-259.27249,711.39227)"
+         id="g4248">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="194.99005"
+           y="270.25922"
+           id="text3681"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3683"
+             x="194.99005"
+             y="270.25922">(A∨B) =&gt; ¬(C∧D))</tspan></text>
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.03979516px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M -3.4931454,222.43548 749.1694,219.51663 Z"
+           id="path3623-1-7"
+           inkscape:connector-curvature="0" />
+        <g
+           id="g4208"
+           transform="translate(398.55109,0)">
+          <text
+             sodipodi:linespacing="125%"
+             id="text3729"
+             y="201.69131"
+             x="-192.84731"
+             style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             xml:space="preserve"><tspan
+               y="201.69131"
+               x="-192.84731"
+               id="tspan3731"
+               sodipodi:role="line">¬(A∨B) ∨ ¬(C∧D) </tspan></text>
+          <g
+             transform="translate(2.1427478,-17.141983)"
+             id="g4189">
+            <path
+               style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.00272679px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="M 12.574023,175.6848 353.83585,174.12913 Z"
+               id="path3623-1-7-5"
+               inkscape:connector-curvature="0" />
+            <g
+               id="g4172">
+              <text
+                 sodipodi:linespacing="125%"
+                 id="text3762"
+                 y="152.40813"
+                 x="94.280914"
+                 style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 xml:space="preserve"><tspan
+                   y="152.40813"
+                   x="94.280914"
+                   id="tspan3764"
+                   sodipodi:role="line">¬(C∧D)</tspan></text>
+              <g
+                 transform="translate(4.2854965,14.999234)"
+                 id="g4039">
+                <path
+                   style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.40795279px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                   d="M -4.5571898,102.45125 351.68232,99.513106 Z"
+                   id="path3623-1-7-1-4-7"
+                   inkscape:connector-curvature="0" />
+                <g
+                   id="g4027">
+                  <text
+                     sodipodi:linespacing="125%"
+                     id="text3851"
+                     y="85.982925"
+                     x="94.280891"
+                     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     xml:space="preserve"><tspan
+                       y="85.982925"
+                       x="94.280891"
+                       id="tspan3853"
+                       sodipodi:role="line">¬C∨¬D</tspan></text>
+                  <g
+                     id="g4017">
+                    <path
+                       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.92119378px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                       d="M 0.82371945,44.616683 151.31148,41.639263 Z"
+                       id="path3623-1-4"
+                       inkscape:connector-curvature="0" />
+                    <text
+                       xml:space="preserve"
+                       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                       x="4.5663078e-06"
+                       y="30.27145"
+                       id="text3870"
+                       sodipodi:linespacing="125%"><tspan
+                         sodipodi:role="line"
+                         id="tspan3872"
+                         x="4.5663078e-06"
+                         y="30.27145">C: Faux</tspan></text>
+                  </g>
+                  <g
+                     id="g4022">
+                    <text
+                       xml:space="preserve"
+                       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                       x="188.56181"
+                       y="32.414211"
+                       id="text3874"
+                       sodipodi:linespacing="125%"><tspan
+                         sodipodi:role="line"
+                         id="tspan3876"
+                         x="188.56181"
+                         y="32.414211">D: Faux</tspan></text>
+                    <path
+                       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.96424848px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                       d="m 186.16241,42.46835 165.5049,-2.96623 z"
+                       id="path3623-1-7-99"
+                       inkscape:connector-curvature="0" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g
+             transform="translate(141.42136,-79.281671)"
+             id="g4085">
+            <path
+               style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.41634107px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="m -538.10087,233.15875 360.52394,-2.93791 z"
+               id="path3623-1-7-1"
+               inkscape:connector-curvature="0" />
+            <text
+               xml:space="preserve"
+               style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               x="-434.97781"
+               y="212.40504"
+               id="text3758"
+               sodipodi:linespacing="125%"><tspan
+                 sodipodi:role="line"
+                 id="tspan3760"
+                 x="-434.97781"
+                 y="212.40504">¬(A∨B)</tspan></text>
+            <g
+               id="g3952"
+               transform="translate(-336.41141,68.567931)">
+              <text
+                 sodipodi:linespacing="125%"
+                 id="text3766"
+                 y="90.268456"
+                 x="-87.852661"
+                 style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 xml:space="preserve"><tspan
+                   y="90.268456"
+                   x="-87.852661"
+                   id="tspan3768"
+                   sodipodi:role="line">¬A∧¬B</tspan></text>
+              <g
+                 id="g3941">
+                <text
+                   xml:space="preserve"
+                   style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                   x="-173.56253"
+                   y="38.842461"
+                   id="text3774"
+                   sodipodi:linespacing="125%"><tspan
+                     sodipodi:role="line"
+                     id="tspan3776"
+                     x="-173.56253"
+                     y="38.842461">A: Faux</tspan></text>
+                <text
+                   xml:space="preserve"
+                   style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                   x="6.4282455"
+                   y="40.985222"
+                   id="text3778"
+                   sodipodi:linespacing="125%"><tspan
+                     sodipodi:role="line"
+                     x="6.4282455"
+                     y="40.985222"
+                     id="tspan3790">B: Faux</tspan><tspan
+                     sodipodi:role="line"
+                     x="6.4282455"
+                     y="90.985222"
+                     id="tspan3782" /><tspan
+                     sodipodi:role="line"
+                     x="6.4282455"
+                     y="140.98523"
+                     id="tspan3784" /><tspan
+                     sodipodi:role="line"
+                     x="6.4282455"
+                     y="190.98523"
+                     id="tspan3786" /><tspan
+                     sodipodi:role="line"
+                     x="6.4282455"
+                     y="240.98523"
+                     id="tspan3788" /></text>
+                <path
+                   style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.94910258px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                   d="m -199.57101,53.418338 367.0008,-1.29599 z"
+                   id="path3623-1-7-1-2-5"
+                   inkscape:connector-curvature="0" />
+              </g>
+            </g>
+            <path
+               style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.4283551px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="m -537.04388,173.15204 369.12372,-2.91837 z"
+               id="path3623-1-45"
+               inkscape:connector-curvature="0" />
+          </g>
+        </g>
+      </g>
+      <g
+         transform="translate(177.84807,764.96097)"
+         id="g4463">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="503.54565"
+           y="210.26225"
+           id="text3685"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3687"
+             x="503.54565"
+             y="210.26225">(A =&gt; ¬(B∧E))</tspan></text>
+        <g
+           id="g4437">
+          <path
+             inkscape:connector-curvature="0"
+             id="path3623-1-7-8"
+             d="m 338.26975,169.25369 587.68171,-1.54992 z"
+             style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.31342733px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+          <g
+             id="g4413">
+            <text
+               xml:space="preserve"
+               style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               x="507.83124"
+               y="150.26537"
+               id="text3893"
+               sodipodi:linespacing="125%"><tspan
+                 sodipodi:role="line"
+                 id="tspan3895"
+                 x="507.83124"
+                 y="150.26537">¬A∨¬(B∧E) </tspan></text>
+            <g
+               id="g4392">
+              <g
+                 transform="translate(-17.141983,-14.999235)"
+                 id="g4357">
+                <text
+                   xml:space="preserve"
+                   style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                   x="407.1221"
+                   y="100.98212"
+                   id="text3897"
+                   sodipodi:linespacing="125%"><tspan
+                     sodipodi:role="line"
+                     id="tspan3899"
+                     x="407.1221"
+                     y="100.98212">¬A</tspan></text>
+                <g
+                   id="g4342"
+                   transform="translate(-59.996939,14.999235)">
+                  <text
+                     sodipodi:linespacing="125%"
+                     id="text3901"
+                     y="32.41431"
+                     x="432.83502"
+                     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     xml:space="preserve"><tspan
+                       y="32.41431"
+                       x="432.83502"
+                       id="tspan3903"
+                       sodipodi:role="line">A:Faux</tspan></text>
+                  <path
+                     inkscape:connector-curvature="0"
+                     id="path3623-1-7-9-9"
+                     d="M 430.44367,51.044994 580.93329,48.067462 Z"
+                     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.92121702px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+                </g>
+              </g>
+              <g
+                 transform="translate(-42.854957,-38.56946)"
+                 id="g4365">
+                <text
+                   xml:space="preserve"
+                   style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                   x="687.82202"
+                   y="133.12335"
+                   id="text3905"
+                   sodipodi:linespacing="125%"><tspan
+                     sodipodi:role="line"
+                     id="tspan3907"
+                     x="687.82202"
+                     y="133.12335">¬B∨¬E</tspan></text>
+                <g
+                   id="g4347"
+                   transform="translate(-23.570226,36.426713)">
+                  <text
+                     sodipodi:linespacing="125%"
+                     id="text3909"
+                     y="34.556965"
+                     x="627.82513"
+                     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     xml:space="preserve"><tspan
+                       y="34.556965"
+                       x="627.82513"
+                       id="tspan3911"
+                       sodipodi:role="line">B: Faux</tspan></text>
+                  <path
+                     inkscape:connector-curvature="0"
+                     id="path3623-1-7-9-9-3"
+                     d="M 621.14824,51.044994 771.63785,48.067462 Z"
+                     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.92121702px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+                </g>
+                <g
+                   id="g4352"
+                   transform="translate(-72.853426,-190.70456)">
+                  <text
+                     sodipodi:linespacing="125%"
+                     id="text3913"
+                     y="257.4028"
+                     x="872.09845"
+                     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     xml:space="preserve"><tspan
+                       y="257.4028"
+                       x="872.09845"
+                       id="tspan3915"
+                       sodipodi:role="line">E: Faux</tspan></text>
+                  <path
+                     inkscape:connector-curvature="0"
+                     id="path3623-1-7-9-9-7"
+                     d="m 869.70699,273.89076 150.48961,-2.97752 z"
+                     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.92121702px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+                </g>
+              </g>
+              <path
+                 inkscape:connector-curvature="0"
+                 id="path3623-1-7-8-0"
+                 d="m 342.57134,111.01849 589.79227,-2.93065 z"
+                 style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.80930495px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+            </g>
+          </g>
+        </g>
+      </g>
+      <g
+         transform="translate(259.27249,760.67548)"
+         id="g4609">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="1032.8046"
+           y="216.69051"
+           id="text3689"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3691"
+             x="1032.8046"
+             y="216.69051">(C =&gt; ¬(D∧E)</tspan></text>
+        <g
+           id="g4584">
+          <path
+             inkscape:connector-curvature="0"
+             id="path3623-1-7-9"
+             d="m 865.40254,173.15874 572.64886,-2.93179 z"
+             style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.78316545px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3917"
+             y="160.97908"
+             x="1026.3762"
+             style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             xml:space="preserve"><tspan
+               y="160.97908"
+               x="1026.3762"
+               id="tspan3919"
+               sodipodi:role="line">¬C∨¬(D∧E)</tspan></text>
+          <g
+             id="g4563">
+            <g
+               id="g4528">
+              <text
+                 sodipodi:linespacing="125%"
+                 id="text3921"
+                 y="111.6959"
+                 x="904.23962"
+                 style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 xml:space="preserve"><tspan
+                   y="111.6959"
+                   x="904.23962"
+                   id="tspan3923"
+                   sodipodi:role="line">¬C</tspan></text>
+              <g
+                 transform="translate(-104.99464,17.141983)"
+                 id="g4513">
+                <text
+                   xml:space="preserve"
+                   style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                   x="974.95032"
+                   y="40.985199"
+                   id="text3925"
+                   sodipodi:linespacing="125%"><tspan
+                     sodipodi:role="line"
+                     id="tspan3927"
+                     x="974.95032"
+                     y="40.985199">C:Faux</tspan></text>
+                <path
+                   style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.92121702px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                   d="m 974.7016,57.473238 150.4896,-2.977532 z"
+                   id="path3623-1-7-9-9-5"
+                   inkscape:connector-curvature="0" />
+              </g>
+            </g>
+            <g
+               id="g4536">
+              <text
+                 sodipodi:linespacing="125%"
+                 id="text3929"
+                 y="113.83865"
+                 x="1167.7975"
+                 style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 xml:space="preserve"><tspan
+                   y="113.83865"
+                   x="1167.7975"
+                   id="tspan3931"
+                   sodipodi:role="line">¬D∨¬E</tspan></text>
+              <g
+                 transform="translate(-96.423652,12.856487)"
+                 id="g4518">
+                <text
+                   xml:space="preserve"
+                   style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                   x="1178.5112"
+                   y="47.413464"
+                   id="text3933"
+                   sodipodi:linespacing="125%"><tspan
+                     sodipodi:role="line"
+                     id="tspan3935"
+                     x="1178.5112"
+                     y="47.413464">D: Faux</tspan></text>
+                <path
+                   style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.92121702px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                   d="m 1180.4054,61.758729 150.4896,-2.97753 z"
+                   id="path3623-1-7-9-9-5-8"
+                   inkscape:connector-curvature="0" />
+              </g>
+              <g
+                 transform="translate(-145.70685,19.28473)"
+                 id="g4523">
+                <text
+                   xml:space="preserve"
+                   style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                   x="1409.9281"
+                   y="40.985207"
+                   id="text3937"
+                   sodipodi:linespacing="125%"><tspan
+                     sodipodi:role="line"
+                     id="tspan3939"
+                     x="1409.9281"
+                     y="40.985207">E: Faux</tspan></text>
+                <path
+                   style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.92121702px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                   d="m 1405.3939,55.330485 150.4896,-2.97753 z"
+                   id="path3623-1-7-9-9-5-1"
+                   inkscape:connector-curvature="0" />
+              </g>
+            </g>
+            <path
+               style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.76996994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="m 867.54581,121.73314 564.07679,-2.93247 z"
+               id="path3623-1-7-9-99"
+               inkscape:connector-curvature="0" />
+          </g>
+        </g>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="212.13203"
+         y="1033.0775"
+         id="text4637"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4639"
+           x="212.13203"
+           y="1033.0775">((A∨B) =&gt; ¬(C∧D)) ∧ (A =&gt; ¬(B∧E)) ∧ (C =&gt; ¬(D∧E))</tspan></text>
+      <g
+         id="g4641"
+         transform="translate(177.84807,764.96097)">
+        <text
+           sodipodi:linespacing="125%"
+           id="text4643"
+           y="210.26225"
+           x="503.54565"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             y="210.26225"
+             x="503.54565"
+             id="tspan4645"
+             sodipodi:role="line">(A =&gt; ¬(B∧E))</tspan></text>
+        <g
+           id="g4647">
+          <path
+             style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.31342733px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 338.26975,169.25369 587.68171,-1.54992 z"
+             id="path4649"
+             inkscape:connector-curvature="0" />
+          <g
+             id="g4651">
+            <text
+               sodipodi:linespacing="125%"
+               id="text4653"
+               y="150.26537"
+               x="507.83124"
+               style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               xml:space="preserve"><tspan
+                 y="150.26537"
+                 x="507.83124"
+                 id="tspan4655"
+                 sodipodi:role="line">¬A∨¬(B∧E) </tspan></text>
+            <g
+               id="g4657">
+              <g
+                 id="g4659"
+                 transform="translate(-17.141983,-14.999235)">
+                <text
+                   sodipodi:linespacing="125%"
+                   id="text4661"
+                   y="100.98212"
+                   x="407.1221"
+                   style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                   xml:space="preserve"><tspan
+                     y="100.98212"
+                     x="407.1221"
+                     id="tspan4663"
+                     sodipodi:role="line">¬A</tspan></text>
+                <g
+                   transform="translate(-59.996939,14.999235)"
+                   id="g4665">
+                  <text
+                     xml:space="preserve"
+                     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     x="432.83502"
+                     y="32.41431"
+                     id="text4667"
+                     sodipodi:linespacing="125%"><tspan
+                       sodipodi:role="line"
+                       id="tspan4669"
+                       x="432.83502"
+                       y="32.41431">A:Faux</tspan></text>
+                  <path
+                     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.92121702px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="M 430.44367,51.044994 580.93329,48.067462 Z"
+                     id="path4671"
+                     inkscape:connector-curvature="0" />
+                </g>
+              </g>
+              <g
+                 id="g4673"
+                 transform="translate(-42.854957,-38.56946)">
+                <text
+                   sodipodi:linespacing="125%"
+                   id="text4675"
+                   y="133.12335"
+                   x="687.82202"
+                   style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                   xml:space="preserve"><tspan
+                     y="133.12335"
+                     x="687.82202"
+                     id="tspan4677"
+                     sodipodi:role="line">¬B∨¬E</tspan></text>
+                <g
+                   transform="translate(-23.570226,36.426713)"
+                   id="g4679">
+                  <text
+                     xml:space="preserve"
+                     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     x="627.82513"
+                     y="34.556965"
+                     id="text4681"
+                     sodipodi:linespacing="125%"><tspan
+                       sodipodi:role="line"
+                       id="tspan4683"
+                       x="627.82513"
+                       y="34.556965">B: Faux</tspan></text>
+                  <path
+                     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.92121702px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="M 621.14824,51.044994 771.63785,48.067462 Z"
+                     id="path4685"
+                     inkscape:connector-curvature="0" />
+                </g>
+                <g
+                   transform="translate(-72.853426,-190.70456)"
+                   id="g4687">
+                  <text
+                     xml:space="preserve"
+                     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     x="872.09845"
+                     y="257.4028"
+                     id="text4689"
+                     sodipodi:linespacing="125%"><tspan
+                       sodipodi:role="line"
+                       id="tspan4691"
+                       x="872.09845"
+                       y="257.4028">E: Faux</tspan></text>
+                  <path
+                     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.92121702px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="m 869.70699,273.89076 150.48961,-2.97752 z"
+                     id="path4693"
+                     inkscape:connector-curvature="0" />
+                </g>
+              </g>
+              <path
+                 style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.80930495px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 342.57134,111.01849 589.79227,-2.93065 z"
+                 id="path4695"
+                 inkscape:connector-curvature="0" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

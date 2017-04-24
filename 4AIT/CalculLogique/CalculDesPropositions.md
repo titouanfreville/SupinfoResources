@@ -4,12 +4,12 @@
 
 ### Sous formules
 
-- (a ∨ b) -> a ∨ b
-- (a ∧ b) -> a ∧ b
-- (e => f) -> e => f
-- (e <=> f) -> e <=> f
-- ¬i -> ¬i
-- ((a => b) => b) => ¬(a ∨ b) -> a => b, a ∨ b, (a => b) => b, ¬(a ∨ b), ((a => b) => b) => (¬(a ∨ b))
+- (a ∨ b) -> a, b
+- (a ∧ b) -> a, b
+- (e => f) -> e, f
+- (e <=> f) -> e, f
+- ¬i -> i
+- ((a => b) => b) => ¬(a ∨ b) -> a => b, a ∨ b, (a => b) => b, ¬(a ∨ b), ((a => b) => b) => (¬(a ∨ b)),a , b
 
 ### Table de vérité
 
@@ -53,14 +53,15 @@
 
 ### Mise sous forme normale conjonctive
 
+```
 (( a => (b ∨ c)) ∧ ((b ∨ d) => (e ∧ f))) ∧ ¬e
-
--> ( (¬a ∨ b ∨ c) ∧ ( ¬(b ∨ d) ∨ (e ∧ f) ) ) ∧ ¬e
--> ((¬a ∨ b ∨ c) ∧ ( (¬b ∧ ¬d) ∨ (e ∧ f))) ∧ ¬e
--> ( (¬a ∨ b ∨ c) ∧ ¬e ) ∧ ( (¬b ∧ ¬d) ∨ (e ∧ f)) ∧ ¬e )
--> ( (¬a ∨ ¬e) ∧ (b ∨ ¬e) ∧ (c ∨ ¬e) ) ∧ ( (¬b ∧ ¬d ∧ ¬e) ∨ ( e ∧ f ∧ ¬e ))
--> ( (¬a ∨ ¬e) ∧ (b ∨ ¬e) ∧ (c ∨ ¬e) ) ∧ ( (¬b ∧ ¬d ∧ ¬e) ∨ FAUX )
--> (¬a ∨ ¬e) ∧ (b ∨ ¬e) ∧ (c ∨ ¬e) ∧ ¬b ∧ ¬d ∧ ¬e
+( (¬a ∨ b ∨ c) ∧ ( ¬(b ∨ d) ∨ (e ∧ f) ) ) ∧ ¬e
+((¬a ∨ b ∨ c) ∧ ( (¬b ∧ ¬d) ∨ (e ∧ f))) ∧ ¬e
+( (¬a ∨ b ∨ c) ∧ ¬e ) ∧ ( (¬b ∧ ¬d) ∨ (e ∧ f)) ∧ ¬e )
+( (¬a ∨ ¬e) ∧ (b ∨ ¬e) ∧ (c ∨ ¬e) ) ∧ ( (¬b ∧ ¬d ∧ ¬e) ∨ ( e ∧ f ∧ ¬e ))
+( (¬a ∨ ¬e) ∧ (b ∨ ¬e) ∧ (c ∨ ¬e) ) ∧ ( (¬b ∧ ¬d ∧ ¬e) ∨ FAUX )
+(¬a ∨ ¬e) ∧ (b ∨ ¬e) ∧ (c ∨ ¬e) ∧ ¬b ∧ ¬d ∧ ¬e
+```
 
 ## Formules à démontrer
 
@@ -75,13 +76,27 @@ a <=> a
 a => ¬a
 a ∧ ¬a
 
-### Déduire ε dans les forumles suivantes
+### Déduire ε des formules suivantes
 
-Do not know yet. 
+formules:
+- a∨¬b∨c
+- d∨¬b∨c
+- ¬a∨ d
+- ¬a∨b
+- ¬a∨¬c
+- b∨¬q
+- b
+- b∨¬c
+- ¬c∨¬q
+- ¬c∨¬b
+- ¬c
+
+![](images/epsilon.png)
 
 ### Montrer par réfutation la proposition : 
 
 (( ( a => (b ∨ c)) ∧ ((b ∨ d) => (e ∧ f)) ) ∧ ¬e ) => (a => c)
+
 
 ### L'expression {a=>b, c=>b} ⊧ (a ∨ c) => b satisfiable ?
 
