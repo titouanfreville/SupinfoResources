@@ -6,6 +6,7 @@
 Cinq hommes de nationalités et de professions différentes habitent des maisons de couleurs différentes et situés côte à côte dans le même alignement. Ils ont chacun un animal favori et une boisson préférée.
 
 Les données du problème sont :
+
 - l'anglais habite la maison rouge
 - l'espagnol a un chien
 - dans la maison verte on boit du café
@@ -22,6 +23,7 @@ Les données du problème sont :
 - le norvégien habite à côté de la maison bleue
 
 La problématique à résoudre est :
+
 - Qui boit de l'eau et qui possède le zèbre ?
 
 ## Formalisation
@@ -91,5 +93,6 @@ solve(Res):- Res = [_,_,_,_,_],
 ```
 
 Solution:
- - Le zèbre est l'animal du japonais
- - L'eau est la boisson du norvégien
+
+- Le zèbre est l'animal du japonais
+- L'eau est la boisson du norvégien
