@@ -108,6 +108,7 @@ formules:
 arbre:
 ```
 
+![](images/preuve_refutation.png)
 
 ### L'expression {a=>b, c=>b} ⊧ (a ∨ c) => b satisfiable ?
 
