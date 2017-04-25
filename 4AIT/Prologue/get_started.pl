@@ -280,4 +280,12 @@ elementPair(X,List):- member(X,List), isPair(X).
 
 compt([], 0).
 compt([_|Y], Res):- compt(Y, OldRes), Res is OldRes + 1.
+
+%% read. 
+question:-writef('%w est-il le père de %w ?\n', [tom, jim]),
+          read(Reponse), answer(Reponse).
+answer('oui'):- writef('%w est bien le père de %w\n', [tom, jim]).
+answer('non'):- writef('%w n est pas le père de %w\n', [tom, jim]).
+answer(Autre):- writef('%w n est pas compréhensible.\n', [Autre]).
+
 %% <><><><><><><><><><><><><><><><><><> <><><><><><><><><><><><><><><><><><> <><><><><><><><><><><><><><><><><><><><><><><><>
