@@ -216,3 +216,49 @@ Si C dit vrai, D et E mentent.
 Arbre de résolution:
 
 ![](images/enquete.png)
+
+couple solution:
+(A,C), (A,B,C), (D,E), (A,B,D,E), (C,E)
+
+A et C mentent:
+
+- D dit vrai ? -> C et E mentent
+  - B dit vrai ? -> A et E mentent -> mentent: A,C,E. vrai: B,D
+  - B dit faux ? -> A et E mentent -> mentent: A,B,C,E. vrai: D
+- D dit faux ? -> 
+  - E dit vrai ? -> A et B mentent -> mentent: A,B,C,D. vrai: E
+  - E ment ? -> 
+    - B dit vrai ? -> mentent: A,C,D,E. vrai: B.
+    - B ment -> mentent A,B,C,D,E
+     
+A,B,C mentent:
+
+- D dit vrai ? -> C et E mentent -> A et E mentent -> mentent: A,B,C,E. vrai: D
+- D dit faux ? -> 
+  - E dit vrai ? -> mentent: A,B,C,D. vrai: E
+  - E ment ? -> mentent A,B,C,D,E
+ 
+A,B,D,E mentent: 
+
+- C vrai -> mentent: A,B,D,E vrai: C
+- C faux -> mentent A,B,C,D,E
+
+D,E mentent: 
+
+- C dit vrai ? -> B et D mentent
+  - A dit vrai ? -> C et D mentent -> contradiction
+  - A ment ? -> mentent: A,B,D,E, vrai: C
+- C ment ? -> 
+  - B dit vrai ? -> A et E mentent -> mentent: A,C,D,E vrai: B
+  - B dit faux ? -> 
+    - A dit vrai ? -> C et D mentent -> mentent: B,C,D,E vrai: A
+    - A ment ? -> mentent: A,B,C,D,E
+
+C,E mentent:
+- D dit vrai ->
+- B dit vrai ? -> A et E mentent -> mentent: A,C,E vrai: B,D
+- B dit faux ? -> 
+  - A dit vrai ? -> C et D mentent -> contradiction
+  - A dit faux ? -> mentent: A,B,C,E vrai: D
+
+Conclusion: A ment très probablement. Si A dit vrai, tous les autres mentent.
