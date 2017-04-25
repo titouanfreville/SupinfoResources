@@ -23,7 +23,7 @@
 | 0 | 0 | 0 | 0 | 1  | 1   |
 | 0 | 1 | 1 | 0 | 1  | 0   |
 | 1 | 0 | 1 | 0 | 0  | 0   |
-| 1 | 1 | 1 | 1 | 1  | 1   | 
+| 1 | 1 | 1 | 1 | 1  | 1   |
 
 ### Equivalence à ET et OU
 
@@ -32,28 +32,28 @@
 | 0 | 1  | 0 | 1  | 0 | 0 | 1  | 1   |
 | 0 | 1  | 1 | 0  | 1 | 0 | 1  | 0   |
 | 1 | 0  | 0 | 1  | 1 | 0 | 0  | 0   |
-| 1 | 0  | 1 | 0  | 1 | 1 | 1  | 1   | 
+| 1 | 0  | 1 | 0  | 1 | 1 | 1  | 1   |
 
 
 | A | B | ∧ | ¬(a=>¬b) |
 | - | - | - | -------- |
 | 0 | 0 | 0 | 0        |
-| 0 | 1 | 0 | 0        | 
-| 1 | 0 | 0 | 0		     |
-| 1 | 1 | 1 | 1		     |
+| 0 | 1 | 0 | 0        |
+| 1 | 0 | 0 | 0        |
+| 1 | 1 | 1 | 1        |
 
 
 
 | A | B | ∨ | ¬a=>b |
 | - | - | - | ----- |
 | 0 | 0 | 0 | 0     |
-| 0 | 1 | 0 | 0     | 
-| 1 | 0 | 0 | 0	    |
-| 1 | 1 | 1 | 1	    |
+| 0 | 1 | 0 | 0     |
+| 1 | 0 | 0 | 0     |
+| 1 | 1 | 1 | 1     |
 
 ### Mise sous forme normale conjonctive
 
-```
+```OCaml
 (( a => (b ∨ c)) ∧ ((b ∨ d) => (e ∧ f))) ∧ ¬e
 ( (¬a ∨ b ∨ c) ∧ ( ¬(b ∨ d) ∨ (e ∧ f) ) ) ∧ ¬e
 ((¬a ∨ b ∨ c) ∧ ( (¬b ∧ ¬d) ∨ (e ∧ f))) ∧ ¬e
@@ -80,6 +80,7 @@ a ∧ ¬a
 ### Déduire ε des formules suivantes
 
 formules:
+
 - a∨¬b∨c
 - d∨¬b∨c
 - ¬a∨ d
@@ -94,9 +95,9 @@ formules:
 
 ![](images/epsilon.png)
 
-### Montrer par réfutation la proposition : 
+### Montrer par réfutation la proposition
 
-```
+```OCaml
 (( ( a => (b ∨ c)) ∧ ((b ∨ d) => (e ∧ f)) ) ∧ ¬e ) => (a => c)
 
 ¬[ (( ( a => (b ∨ c)) ∧ ((b ∨ d) => (e ∧ f)) ) ∧ ¬e ) => (a => c) ]
@@ -110,7 +111,7 @@ arbre:
 
 ![](images/preuve_refutation.png)
 
-### L'expression {a=>b, c=>b} ⊧ (a ∨ c) => b satisfiable ?
+### L'expression {a=>b, c=>b} ⊧ (a ∨ c) => b satisfiable
 
 ![](images/preuve_aoucimpb.png)
 
@@ -118,31 +119,31 @@ arbre:
 
 ### Si la neige tombe, je ne roule pas en voiture
 
-```
+```OCaml
 neige => ¬(voiture ∧ rouler)
 ```
 
 ### Je suis à l'heure
 
-```
+```OCaml
 moi ∧ onTime
 ```
 
 ### Je suis en retard
 
-```
+```OCaml
 ¬(moi ∧ onTime)
 ```
 
 ### Je mange, la neige tombe, je ne roule pas en voiture donc je suis en retard
 
-```
+```OCaml
 (moi ∧ manger ∧ neige ∧ ¬(voiture ∧ rouler)) => ¬(moi ∧ onTime)
 ```
 
 ### Si je suis en retard, je ne manges pas.
 
-```
+```OCaml
 ¬(moi ∧ onTime) => ¬(moi ∧ manger)
 ```
 
@@ -150,7 +151,7 @@ moi ∧ onTime
 
 ### Raisonnement
 
-```
+```OCaml
   S'il est arrivé tout seul, il a pris sa moto ou le traway.
   S'il a pris le traway ou sa voiture, alors il est arrivé en retard et a manqué la réunion.
   Il n'est pas arrivé en retard. 
@@ -159,21 +160,21 @@ moi ∧ onTime
 
 #### Formalisez l'énoncé en CP
 
-```
+```OCaml
 Axiome :
 seul => (moto ∨ tram)
 (tram ∨ voiture) => (retard ∧ ¬reunion)
 
-Raisonnement: 
+Raisonnement:
 ```
 
 ![](images/raisonement_seul.png)
 
 ### Enquête
 
-Clauses: 
+Clauses:
 
-```
+```OCaml
 Le premier suspect Mr A dit : Mrs C et D mentent.
 Le deuxième suspect Mr B dit : Mrs A et E mentent.
 Le troisième suspect Mr C dit : Mrs B et D mentent.
@@ -181,10 +182,10 @@ Le quatrième suspect Mr D dit : Mrs C et E mentent.
 Et le cinquième suspect Mr E dit : Mrs A et B mentent.
 ```
 
-Ecriture en proposition logique: 
+Ecriture en proposition logique:
 
 ```OCaml
-Propositions: 
+Propositions:
 A => ¬(C∧D)
 B => ¬(A∧E)
 C => ¬(B∧D)
@@ -205,8 +206,9 @@ Simplification:
 ```
 
 Après simplification:
-```
-Si A ou B disent la vérité, C et D mentent. 
+
+```OCaml
+Si A ou B disent la vérité, C et D mentent.
 Si A dit vrai, B et E mentent.
 Si C dit vrai, D et E mentent.
 ```
