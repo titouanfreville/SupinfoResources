@@ -1,0 +1,356 @@
+state 0 //
+
+    0 $accept: . calc
+    1 calc: .  [$end, '(', '-', '\n', EXIT, NB]
+
+    $end  reduce using rule 1 (calc)
+    '('   reduce using rule 1 (calc)
+    '-'   reduce using rule 1 (calc)
+    '\n'  reduce using rule 1 (calc)
+    EXIT  reduce using rule 1 (calc)
+    NB    reduce using rule 1 (calc)
+
+    calc  goto state 1
+
+state 1 // [$end]
+
+    0 $accept: calc .  [$end]
+    2 calc: calc . exp
+
+    $end  accept
+    '('   shift, and goto state 11
+    '-'   shift, and goto state 10
+    '\n'  shift, and goto state 3
+    EXIT  shift, and goto state 5
+    NB    shift, and goto state 9
+
+    exp     goto state 2
+    expNum  goto state 4
+    expo    goto state 7
+    fact    goto state 6
+    term    goto state 8
+
+state 2 // '\n' [$end]
+
+    2 calc: calc exp .  [$end, '(', '-', '\n', EXIT, NB]
+
+    $end  reduce using rule 2 (calc)
+    '('   reduce using rule 2 (calc)
+    '-'   reduce using rule 2 (calc)
+    '\n'  reduce using rule 2 (calc)
+    EXIT  reduce using rule 2 (calc)
+    NB    reduce using rule 2 (calc)
+
+state 3 // '\n'
+
+    3 exp: '\n' .  [$end, '(', '-', '\n', EXIT, NB]
+
+    $end  reduce using rule 3 (exp)
+    '('   reduce using rule 3 (exp)
+    '-'   reduce using rule 3 (exp)
+    '\n'  reduce using rule 3 (exp)
+    EXIT  reduce using rule 3 (exp)
+    NB    reduce using rule 3 (exp)
+
+state 4 // NB ['+']
+
+    4 exp: expNum . '='
+    5 exp: expNum . '\n'
+    8 expNum: expNum . '+' fact
+    9 expNum: expNum . '-' fact
+
+    '+'   shift, and goto state 13
+    '-'   shift, and goto state 14
+    '='   shift, and goto state 25
+    '\n'  shift, and goto state 26
+
+state 5 // EXIT
+
+    6 exp: EXIT .  [$end, '(', '-', '\n', EXIT, NB]
+
+    $end  reduce using rule 6 (exp)
+    '('   reduce using rule 6 (exp)
+    '-'   reduce using rule 6 (exp)
+    '\n'  reduce using rule 6 (exp)
+    EXIT  reduce using rule 6 (exp)
+    NB    reduce using rule 6 (exp)
+
+state 6 // NB [')']
+
+    7 expNum: fact .  [')', '*', '+', '-', '/', '=', '\n', '^']
+   11 fact: fact . '*' expo
+   12 fact: fact . '/' expo
+
+    ')'   reduce using rule 7 (expNum)
+    '*'   shift, and goto state 17
+    '+'   reduce using rule 7 (expNum)
+    '-'   reduce using rule 7 (expNum)
+    '/'   shift, and goto state 18
+    '='   reduce using rule 7 (expNum)
+    '\n'  reduce using rule 7 (expNum)
+    '^'   reduce using rule 7 (expNum)
+    conflict on '*', shift, and goto state 17, reduce using rule 7
+    conflict on '/', shift, and goto state 18, reduce using rule 7
+
+state 7 // NB [')']
+
+   10 fact: expo .  [')', '*', '+', '-', '/', '=', '\n', '^']
+   14 expo: expo . '^' term
+
+    ')'   reduce using rule 10 (fact)
+    '*'   reduce using rule 10 (fact)
+    '+'   reduce using rule 10 (fact)
+    '-'   reduce using rule 10 (fact)
+    '/'   reduce using rule 10 (fact)
+    '='   reduce using rule 10 (fact)
+    '\n'  reduce using rule 10 (fact)
+    '^'   shift, and goto state 20
+    conflict on '^', shift, and goto state 20, reduce using rule 10
+
+state 8 // NB [')']
+
+   13 expo: term .  [')', '*', '+', '-', '/', '=', '\n', '^']
+
+    ')'   reduce using rule 13 (expo)
+    '*'   reduce using rule 13 (expo)
+    '+'   reduce using rule 13 (expo)
+    '-'   reduce using rule 13 (expo)
+    '/'   reduce using rule 13 (expo)
+    '='   reduce using rule 13 (expo)
+    '\n'  reduce using rule 13 (expo)
+    '^'   reduce using rule 13 (expo)
+
+state 9 // NB
+
+   15 term: NB .  [')', '*', '+', '-', '/', '=', '\n', '^']
+
+    ')'   reduce using rule 15 (term)
+    '*'   reduce using rule 15 (term)
+    '+'   reduce using rule 15 (term)
+    '-'   reduce using rule 15 (term)
+    '/'   reduce using rule 15 (term)
+    '='   reduce using rule 15 (term)
+    '\n'  reduce using rule 15 (term)
+    '^'   reduce using rule 15 (term)
+
+state 10 // '-'
+
+   16 term: '-' . expNum  // assoc %left, prec 1
+
+    '('  shift, and goto state 11
+    '-'  shift, and goto state 10
+    NB   shift, and goto state 9
+
+    expNum  goto state 24
+    expo    goto state 7
+    fact    goto state 6
+    term    goto state 8
+
+state 11 // '('
+
+   17 term: '(' . expNum ')'
+
+    '('  shift, and goto state 11
+    '-'  shift, and goto state 10
+    NB   shift, and goto state 9
+
+    expNum  goto state 12
+    expo    goto state 7
+    fact    goto state 6
+    term    goto state 8
+
+state 12 // '(' NB [')']
+
+    8 expNum: expNum . '+' fact
+    9 expNum: expNum . '-' fact
+   17 term: '(' expNum . ')'
+
+    ')'  shift, and goto state 15
+    '+'  shift, and goto state 13
+    '-'  shift, and goto state 14
+
+state 13 // NB '+'
+
+    8 expNum: expNum '+' . fact
+
+    '('  shift, and goto state 11
+    '-'  shift, and goto state 10
+    NB   shift, and goto state 9
+
+    expo  goto state 7
+    fact  goto state 23
+    term  goto state 8
+
+state 14 // NB '-'
+
+    9 expNum: expNum '-' . fact
+
+    '('  shift, and goto state 11
+    '-'  shift, and goto state 10
+    NB   shift, and goto state 9
+
+    expo  goto state 7
+    fact  goto state 16
+    term  goto state 8
+
+state 15 // '(' NB ')'
+
+   17 term: '(' expNum ')' .  [')', '*', '+', '-', '/', '=', '\n', '^']
+
+    ')'   reduce using rule 17 (term)
+    '*'   reduce using rule 17 (term)
+    '+'   reduce using rule 17 (term)
+    '-'   reduce using rule 17 (term)
+    '/'   reduce using rule 17 (term)
+    '='   reduce using rule 17 (term)
+    '\n'  reduce using rule 17 (term)
+    '^'   reduce using rule 17 (term)
+
+state 16 // NB '-' NB [')']
+
+    9 expNum: expNum '-' fact .  [')', '*', '+', '-', '/', '=', '\n', '^']
+   11 fact: fact . '*' expo
+   12 fact: fact . '/' expo
+
+    ')'   reduce using rule 9 (expNum)
+    '*'   shift, and goto state 17
+    '+'   reduce using rule 9 (expNum)
+    '-'   reduce using rule 9 (expNum)
+    '/'   shift, and goto state 18
+    '='   reduce using rule 9 (expNum)
+    '\n'  reduce using rule 9 (expNum)
+    '^'   reduce using rule 9 (expNum)
+    conflict on '*', shift, and goto state 17, reduce using rule 9
+    conflict on '/', shift, and goto state 18, reduce using rule 9
+
+state 17 // NB '*'
+
+   11 fact: fact '*' . expo
+
+    '('  shift, and goto state 11
+    '-'  shift, and goto state 10
+    NB   shift, and goto state 9
+
+    expo  goto state 22
+    term  goto state 8
+
+state 18 // NB '/'
+
+   12 fact: fact '/' . expo
+
+    '('  shift, and goto state 11
+    '-'  shift, and goto state 10
+    NB   shift, and goto state 9
+
+    expo  goto state 19
+    term  goto state 8
+
+state 19 // NB '/' NB [')']
+
+   12 fact: fact '/' expo .  [')', '*', '+', '-', '/', '=', '\n', '^']
+   14 expo: expo . '^' term
+
+    ')'   reduce using rule 12 (fact)
+    '*'   reduce using rule 12 (fact)
+    '+'   reduce using rule 12 (fact)
+    '-'   reduce using rule 12 (fact)
+    '/'   reduce using rule 12 (fact)
+    '='   reduce using rule 12 (fact)
+    '\n'  reduce using rule 12 (fact)
+    '^'   shift, and goto state 20
+    conflict on '^', shift, and goto state 20, reduce using rule 12
+
+state 20 // NB '^'
+
+   14 expo: expo '^' . term
+
+    '('  shift, and goto state 11
+    '-'  shift, and goto state 10
+    NB   shift, and goto state 9
+
+    term  goto state 21
+
+state 21 // NB '^' NB [')']
+
+   14 expo: expo '^' term .  [')', '*', '+', '-', '/', '=', '\n', '^']
+
+    ')'   reduce using rule 14 (expo)
+    '*'   reduce using rule 14 (expo)
+    '+'   reduce using rule 14 (expo)
+    '-'   reduce using rule 14 (expo)
+    '/'   reduce using rule 14 (expo)
+    '='   reduce using rule 14 (expo)
+    '\n'  reduce using rule 14 (expo)
+    '^'   reduce using rule 14 (expo)
+
+state 22 // NB '*' NB [')']
+
+   11 fact: fact '*' expo .  [')', '*', '+', '-', '/', '=', '\n', '^']
+   14 expo: expo . '^' term
+
+    ')'   reduce using rule 11 (fact)
+    '*'   reduce using rule 11 (fact)
+    '+'   reduce using rule 11 (fact)
+    '-'   reduce using rule 11 (fact)
+    '/'   reduce using rule 11 (fact)
+    '='   reduce using rule 11 (fact)
+    '\n'  reduce using rule 11 (fact)
+    '^'   shift, and goto state 20
+    conflict on '^', shift, and goto state 20, reduce using rule 11
+
+state 23 // NB '+' NB [')']
+
+    8 expNum: expNum '+' fact .  [')', '*', '+', '-', '/', '=', '\n', '^']
+   11 fact: fact . '*' expo
+   12 fact: fact . '/' expo
+
+    ')'   reduce using rule 8 (expNum)
+    '*'   shift, and goto state 17
+    '+'   reduce using rule 8 (expNum)
+    '-'   reduce using rule 8 (expNum)
+    '/'   shift, and goto state 18
+    '='   reduce using rule 8 (expNum)
+    '\n'  reduce using rule 8 (expNum)
+    '^'   reduce using rule 8 (expNum)
+    conflict on '*', shift, and goto state 17, reduce using rule 8
+    conflict on '/', shift, and goto state 18, reduce using rule 8
+
+state 24 // '-' NB [')']
+
+    8 expNum: expNum . '+' fact
+    9 expNum: expNum . '-' fact
+   16 term: '-' expNum .  [')', '*', '+', '-', '/', '=', '\n', '^']  // assoc %left, prec 1
+
+    ')'   reduce using rule 16 (term)
+    '*'   reduce using rule 16 (term)
+    '+'   shift, and goto state 13
+    '-'   shift, and goto state 14
+    '/'   reduce using rule 16 (term)
+    '='   reduce using rule 16 (term)
+    '\n'  reduce using rule 16 (term)
+    '^'   reduce using rule 16 (term)
+    conflict on '+', shift, and goto state 13, reduce using rule 16
+    conflict on '-', shift, and goto state 14, reduce using rule 16
+
+state 25 // NB '='
+
+    4 exp: expNum '=' .  [$end, '(', '-', '\n', EXIT, NB]
+
+    $end  reduce using rule 4 (exp)
+    '('   reduce using rule 4 (exp)
+    '-'   reduce using rule 4 (exp)
+    '\n'  reduce using rule 4 (exp)
+    EXIT  reduce using rule 4 (exp)
+    NB    reduce using rule 4 (exp)
+
+state 26 // NB '\n'
+
+    5 exp: expNum '\n' .  [$end, '(', '-', '\n', EXIT, NB]
+
+    $end  reduce using rule 5 (exp)
+    '('   reduce using rule 5 (exp)
+    '-'   reduce using rule 5 (exp)
+    '\n'  reduce using rule 5 (exp)
+    EXIT  reduce using rule 5 (exp)
+    NB    reduce using rule 5 (exp)
+
