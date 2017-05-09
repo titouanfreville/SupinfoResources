@@ -44,4 +44,4 @@ Expression b ou vide ou toutes suites d'expression a (b) (epsilon) (a...)
 
 ### a(a|b)*a
 
-Chaines dont les extrèmes sont a et l'interieur une suite quelconque de a ou b (aa) (a∑a), ∑= a ou b
+Chaines dont les extrèmes sont a et l'interieur une suite quelconque de a ou b (aa) (a∑\*a), ∑= a ou b
