@@ -4,21 +4,21 @@
 
 ∑ = {L, C}, avec L= {a,b,...,z} et C={0,1,..,9}
 
-### 1 - ER représetant l'ensemble des lettres et l'ensemble des chiffres de ∑
+### 1 - ER représentant l'ensemble des lettres et l'ensemble des chiffres de ∑
 
 L+C
 
 ### 2 - ER représeant les mots de logueur 2 composé en alternance d'une lettre et d'un chiffre sur ∑
 
-(L+C)(C+L)
+(LC)+(CL) = (LC)|(CL)
 
 ### 3 - ER représentant les nombres de ∑
 
 C⁺
 
-### 4 - ER chaînes de lettre de longuer 4
+### 4 - ER chaînes de lettre de longueur 4
 
-LLLL
+LLLL = L^4
 
 ### 5 - Chaînes quelconques commençant par une lettre
 
@@ -30,7 +30,7 @@ L(L+C)\*
 
 F1 = NomsepMaj(min)\*
 
-F2 = MajsepsepNom (?)
+F2 = Maj.sepNom
 
 ## 3 - Signification des expressions
 
