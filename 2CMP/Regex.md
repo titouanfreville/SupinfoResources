@@ -10,7 +10,7 @@ L+C
 
 ### 2 - ER représeant les mots de logueur 2 composé en alternance d'une lettre et d'un chiffre sur ∑
 
-(L+C)(C+L)
+(LC)+(CL) = (LC)|(CL)
 
 ### 3 - ER représentant les nombres de ∑
 
