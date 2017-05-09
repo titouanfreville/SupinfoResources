@@ -18,7 +18,7 @@ C⁺
 
 ### 4 - ER chaînes de lettre de longueur 4
 
-LLLL = L^4^
+LLLL = L^4
 
 ### 5 - Chaînes quelconques commençant par une lettre
 
