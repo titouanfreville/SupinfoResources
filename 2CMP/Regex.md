@@ -30,7 +30,7 @@ L(L+C)\*
 
 F1 = NomsepMaj(min)\*
 
-F2 = MajsepsepNom
+F2 = Maj.sepNom
 
 ## 3 - Signification des expressions
 
