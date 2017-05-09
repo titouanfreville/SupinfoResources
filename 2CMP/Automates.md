@@ -61,7 +61,7 @@ Config = {
 
 ![](images/pile_addition_1.png)
 
-### Calcul addition binaire général.
+### Calcul addition binaire général.
 
 ```Ocaml
 Automate = (S, ∑, P, T, q0, $, F)
