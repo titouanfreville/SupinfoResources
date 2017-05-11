@@ -1,0 +1,74 @@
+\documentclass[a4paper,11pt]{article}
+%\documentclass[a4paper,11pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+
+\title{3AIT - SCE - SCT }
+\author{Titouan FREVILLE}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Exercice 1}
+\subsection{Question 1.1}
+Let t= 2*3 in		| t = 6 -- old t
+  Let t=1, v=t+2	| t = 1, v = old t + 2 = 8
+    in t-v;		| t - v = - 7
+The final result have to be -7.
+\subsection{Question 1.2}
+\subsection{Question 1.3}
+In lisp, tree are List of List under a lot of levels ...
+here, we could represent the tree with : 
+(setq tree '(
+  / (* (12) (* (* (6) (8)) (4))) (* (/ (8) (/ (10) (5)) (45)) (* (3) (3)))
+))
+And a way to have it using car and cdr only is :
+(car(car(cdr(car(cdr(cdr(car(cdr(car(cdr(cdr(tree))))))))))))
+\subsection{Questin 1.4}
+Functional programming is base on mathematical recursivity concept. Sequences work well with funcionnal programming cause they are recursive structure we can easily iterate through recursive functions.
+\subsection{Question 1.5}
+If I want to get ATOM 25 in with this functon, I'll place it here :
+(() (()) ((() ())) (((() (25) ()))) ((((() () () ()))))))))
+\subsection{Question 1.6}
+Adventage of imperative function are quite low in functionnal programming. We don't really need imperative structure as we can always find a back way to do it recursively. But if you need to manipulate pointers and data without losses, imperative function are always welcomme. Another advantage could be that it ease the transition between full recursive programm and standart learned imperative or object programms.
+\section{Funciton Programming}
+If the PIVOT Point is the element where to cut in the list :
+Let CUT a function -> (list1, list2)
+CUT (list, pivot) = Match list with
+Vide list : (Vide,Vide)
+NonVide list : Premier list == pivot and cons (Premier list,l2)
+	       Else Let (l1,l2) = CUT(Suite list, pivot)
+	       
+If the PIVOT Point is the position where to cut in the list :
+Let CUT a function -> (list1, list2)
+CUT (list, pivot) = Match list with
+Vide list : (Vide,Vide)
+NonVide list : 0 == pivot and cons (Premier list,l2)
+	       Else Let (l1,l2) = CUT(Suite list, pivot-1)
+\section{Exercice 3}
+(defun NumberOfLetterInUniqueList (l letter)
+  (cond
+    ((null l) 0)
+    ((eq (first l) letter)(+ 1 (NumberOfLetterInUniqueList (cdr l) letter)))
+    (t (NumberOfLetterInUniqueList (cdr l) letter))
+  )
+)
+
+(defun NumberOfLetter (l letter)
+  (cond
+    ((null l)())
+    (t (cons (NumberOfLetterInUniqueList (car l) letter) (NumberOfLetter (cdr l) letter)))
+  )
+)
+
+(setq l1 '((I n) (t h i s) (t h e r e) (a r e) (m a y) (b e) (t h e) (e)))
+
+(NumberOfLetter l1 'e)
+
+\section{Exercice 4}
+
+I choose to make 3 function instead of one so I have a recursive function that will ask the user to enter a note until he under an unvalid entry, and a function that recursively count the number of la in a list.
+The function to CountTheLa just call Ask on an empty list, and when the user finished, call the Compter on the acquier list. Function are not case sensitive with the lower() call, and thay are not optmized as I don't try to organize the provided elements. Another solution whould be to have a single function witch ask for user entries and then add 1 to a compter if it's a la, exit if the entry is not a note.
+
+\end{document}
