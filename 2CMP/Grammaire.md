@@ -19,7 +19,7 @@ GN = (
     {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9",} /* termiaux */
     { < nombre >, < chiffre > }, /* non terminaux */
     {   /* production */
-        < nombre > ::= < nombre > | < chiffre >
+        < nombre > ::= (< nombre > | )< chiffre >
         < chiffre > ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
     }
     < nombre > /* axiome */
@@ -35,9 +35,9 @@ GN = (
     {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "-", "+"} /* termiaux */
     { < nombre >, < chiffre >, < signe > }, /* non terminaux */
     {   /* production */
-        < nombre > ::= < signe > < nombre > | < signe >< chiffre > | < chiffre >
+        < nombre > ::= < signe > < nombre > < chiffre > | < signe >< chiffre > | < chiffre >
         < signe > ::= "+" | "-"
-        < chiffre > ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+        < chiffre > ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "0"
     }
     < nombre > /* axiome */
 
@@ -50,7 +50,7 @@ GN = (
     {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "-"} /* termiaux */
     { < nombre >, < chiffre >, < signe > }, /* non terminaux */
     {   /* production */
-        < nombre > ::= [ < signe > ] (< nombre > | < chiffre >)
+        < nombre > ::= [ < signe > ] (< nombre > | )< chiffre >)
         < signe > ::= "-"
         < chiffre > ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
     }
