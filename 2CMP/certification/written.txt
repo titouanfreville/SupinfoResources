@@ -1,0 +1,57 @@
+Exercice 1 : Question
+
+1 - Un language de programmation est un language formelle. Il a donc un vocabulaire limité et peu de construction syntaxique.
+De plus, il est rigoureux. Une expression est soit valide soit invalide, il ne peut pas y avoir d'incertitude. 
+Avantages du langage naturelle: souple grace à une syntaxe complexe et à un vocabulaire riche permettant d'exprimer des idées complexe.
+Adapté à l'écrit et à l'orale. 
+Inconvénient: Interprétable car peux rigoureux et très ambigüe.
+
+2 - Avantage de la compilation sur des langage typé: 
+- Pas besoin de chercher le type des variables (qui est fixé par l'utilisateur).
+- Determination possible d'erreur dans les fonctions à partir des types de variable (évite de se retrouver à ajouter des choux et des poireaux).
+- Grammaire plus simple
+- Annalyse plus rapide
+
+3 - Pour le language C (pour les type de fichier).
+1. Le préprocesseur traduit le fichier de code en un fichier (.i)
+représentant les étapes d'évolution du programme et les éléments nécessaire à ces moments.
+2. Le compilateur traduit le fichier .i du précompilateur en assembleur (fichier .s).
+3. L’assembleur traduit le fichier assembleur en fichier d'objet (.o) qui est le code binaire correspondant
+aux fichier de code sans liens externe. 
+4. L’éditeur de liens transforme le fichier d'objet (.o) en code binaire exécutable en liant celui ci aux bibliothèque
+externes.
+
+4 - La grammaire représente la syntaxe d'un language. Elle est composé d'axiome, de terminaux et de non terminaux. 
+
+Exercice 2: Automate
+
+1 - cf 2_1_automata.png
+
+2 - ((es)*(se(se)*)?(es)*)
+
+3 - cf 2_3_automata.png
+
+Exercie 3: Grammar
+
+1 - G = (
+  S -> XY
+  X -> a | aX
+  Y -> ε | aYb
+)
+
+Chomsky type : 2 
+langage : a+(a^nb^n) (a, aa, aaa....., aab, aaab, aaaabb, ...)
+
+2 - G = (
+  S -> bA | aB
+  A -> bAA | aS | a
+  B -> aBB | bS | b
+)
+
+GNorm = (
+  S -> AC | BD
+  A -> a
+  B -> b
+  C -> ACC | AS | A
+  D -> ADD | BS | B
+)
