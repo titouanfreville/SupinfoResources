@@ -116,25 +116,18 @@ Tout ensemble de a et b en contenant au moins un. (a, b, ab, ba, abab, aabb, abb
 
 ### Mettre sous forme normale la grammaire : S -> TF | aS | a, T -> Tb | ε, F -> TS
 
+```Ocaml
 S -> aS0
-
 S -> TF
-
 S -> a
-
 S0 -> TF
-
 S0 -> a
-
 T -> T0b
-
 T -> b
-
 T0 -> ε
-
 T0 -> b
-
 F -> TS
+```
 
 ## 3 Grammaire des expressions arithmétiques.
 
@@ -155,8 +148,9 @@ G : (
 )
 
 
-Ou 
-```
+Ou
+
+```Ocaml
 Exp -> Nb "cat" Nb "=" Nb
 
 Nb -> Nb 1
@@ -208,7 +202,9 @@ Fact -> nb
 | 3 |    | r0  |     | |      |
 
 <!-- Calcul ex 1*5*5 -->
+
 ```Ocaml
+
 1*5*5
 
 1 nb. s1
@@ -282,6 +278,7 @@ Premier( nb + Sum ) = nb +
 | Sum  | Sum -> ( Sum )   | Sum -> nb |             |                     |                    |                    | Sum -> nb + Sum |
 
 <!-- Calcul (1*5*5) -->
+
 ```Ocaml
 (1*5*5) -> Expr
 Premier (1*5*5) = (
@@ -370,11 +367,11 @@ F -> (E)
 F -> id
 ```
 
-#### Automate Déterministe
+### Automate Déterministe
 
 ![](images/automate_lr.png)
 
-#### Table d'analyse
+### Table d'analyse
 
 |  | ε       | | |
 |--|---------|-|-|
