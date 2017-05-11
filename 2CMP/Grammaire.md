@@ -143,7 +143,7 @@ F -> TS
 G : (
 
     {
-        < exp > : < nombre > "cat" < nombre > "="
+        < exp > : < nombre > "cat" < nombre > "=" <nombre><nombre>
         < nombre > : < nombre > 1
     },
     {
