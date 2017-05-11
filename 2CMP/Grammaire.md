@@ -154,9 +154,13 @@ G : (
 
 )
 
-Exp -> Nb "cat" Nb "="
+
+Ou 
+```
+Exp -> Nb "cat" Nb "=" Nb
 
 Nb -> Nb 1
+```
 
 ### Représentation cohérante de la grammaire arithmétique polonaise
 
