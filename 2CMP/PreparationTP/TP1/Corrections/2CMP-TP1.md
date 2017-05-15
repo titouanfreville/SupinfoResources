@@ -88,4 +88,4 @@ M5 = c
 
 Lesquels sont reconnus par (a|b)*c(a|f|d)+
 
-M5, M2, M3
+M2, M3
