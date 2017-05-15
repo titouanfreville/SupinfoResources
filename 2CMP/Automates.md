@@ -18,7 +18,7 @@
 
 ### a\*b\*c
 
-![](images/er1_a*b*c.png)
+![](images/er1_a-b-c.png)
 
 ### (ab)⁺
 
