@@ -1,4 +1,3 @@
-% use_module(library(clpfd)).
 % Prédicat estPresent:
 estPresent(A,[A|_]):- !.
 estPresent(A,[_|X]):- estPresent(A,X).
@@ -46,7 +45,8 @@ carreMagique(Matrice, R):-  Matrice=[A0,A1,A2,B0,B1,B2,C0,C1,C2],
                             A0+A1+A2#=R, B0+B1+B2#=R , C0+C1+C2#=R, A0+B1+C2#=R, A2+B1+C0#=R,
                             A0+B0+C0#=R, A1+B1+C1#=R, A2+B2+C2#=R,
                             labeling([], Matrice),
-                            tousDifferents(Matrice).
+                            tousDifferents(Matrice),
+                            afficheMatrice(Matrice,1,3).
 
 % all solutions: 
 % Res = [2, 7, 6, 9, 5, 1, 4, 3, 8] ;
