@@ -8,7 +8,7 @@
 expr_calcs: expr_calc | expr_calcs expr_calc;
 expr_calc: expr_num EQUAL
            {
-                   printf("EQUAL\n");
+                printf("EQUAL\n");
            } | EXIT {YYACCEPT;};
 expr_num: facteur 
           | expr_num ADD facteur 
@@ -18,7 +18,7 @@ expr_num: facteur
 facteur: terme 
         | facteur MULT terme 
           {printf("MULT\n");}
-        | facteur DIV terme;
+        | facteur DIV terme
           {printf("DIV\n");};
 terme: NB {printf("Nb = %d \n", $1);} | LBR expr_num RBR {printf("BRACKETS\n");};
 %%

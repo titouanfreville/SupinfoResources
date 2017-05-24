@@ -1,8 +1,8 @@
 all: init gen_all compile_all test
 
-gen_all: gen_calc1 gen_calc2 gen_calc3 gen_calc4
+gen_all: gen_calc1 gen_calc2 gen_calc3 # gen_calc4
 
-compile_all: cmp_calc1 cmp_calc2 cmp_calc3 cmp_calc4
+compile_all: cmp_calc1 cmp_calc2 cmp_calc3  #cmp_calc4
 
 init:
 	-mkdir compiled 1> /dev/null 3> /dev/null > /dev/null

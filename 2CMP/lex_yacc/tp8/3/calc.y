@@ -28,7 +28,7 @@ facteur: terme
           {
                 $$=$1*$3;
           }
-        | facteur DIV terme;
+        | facteur DIV terme
           {
                 $$=$1/$3;
           };

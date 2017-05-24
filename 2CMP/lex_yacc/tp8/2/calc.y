@@ -18,7 +18,7 @@ expr_num: facteur
 facteur: terme 
         | facteur MULT terme 
           { $$=$1*$3;}
-        | facteur DIV terme;
+        | facteur DIV terme
           {$$=$1/$3;};
 terme: NB {$$=$1;} | LBR expr_num RBR {$$=$2;};
 %%
