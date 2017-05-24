@@ -1,0 +1,15 @@
+TANTQUE {jesuiskass > 0} FAIRE {pick=0; p++;} FINTANTQUE
+TANTQUE {yellowstar>0} ET {faker>0} FAIRE {team=10000;t++;} FINTANTQUE
+
+TANTQUE {jesuiskass > 0} FAIRE {pick=0; pinv++;} FINTANTQUE
+TANTQUE {yellowstar>0} ET {faker>0} FAIRE {team1inv=10000;t++;} 
+
+TANTQUE {jesuiskass1inv > 0} FAIRE {pick=0; p++;} FINTANTQUE
+TANTQUE {yellowstar>ainv} ET {faker>0} FAIRE {team1inv=10000;t++;} FINTANTQUE
+
+
+TANT {jesuiskass>0} FAIRE {pick=0; p++;} FINTANTQUE
+TANTQUE {yellowstar>0} ET {faker>0} FAIRE {team=10000;t++;} TANTQUE
+TANTQUE {yellowstar>0} {faker>0} FAIRE {team=10000;t++;} FINTANTQUE
+TANTQUE {jesuiskass>0} {pick=0; p++;} FINTANTQUE
+TANTQUE {yellowstar>0} ET {faker>0} {team=10000;t++;} FINTANTQUE

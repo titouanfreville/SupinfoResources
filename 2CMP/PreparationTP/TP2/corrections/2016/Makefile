@@ -1,17 +1,26 @@
-## This is a general Make file to include into your repo.
-## Please it will not be able to compile multiple file as it is.
+## This is a general Make file to include into your repo.
+## It is able to produce multiple lex/yacc compilation.
+## You need to configure the compilation for binaries before using it.
+
+## Default variables.
+CC=gcc -o
+YACC=yacc -d -o
+LEX=lex -o
+BIN=exec
+BIN_SRC=parser.c lexer.c
+
 default: all
 
-all: exec.bin
+all: $(BIN)
 
-exec.bin: parser.c lexer.c
-	gcc -o $@ $^
+$(BIN): $(BIN_SRC)
+	@$(CC) $@ $^
 
-parser.c: *.y
-	yacc -d -o $@ $^
+%.c: %.y
+	@$(YACC) -d -o $@ $<
 
-lexer.c: *.l
-	lex -o $@ $^
+%.c: %.l
+	@$(LEX) $@ $<
 
 clean:
-	rm *.c *.h exec.bin
+	rm *.c *.h exec
