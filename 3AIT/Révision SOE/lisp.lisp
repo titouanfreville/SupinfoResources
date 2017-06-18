@@ -81,9 +81,8 @@
   (cond
     ((null l) ())
     ((null (cdr l)) l)
-      ((< (car l) (car (tribulle_forme1 (cdr l)))) (cons (car l) (tribulle_forme1 (cdr l))))
-      (T (cons (car (tribulle_forme1 (cdr l))) (tribulle_forme1 (cons (car l) (cdr (tribulle_forme1 (cdr l)))))))
-    )
+    ((< (car l) (car (tribulle_forme1 (cdr l)))) (cons (car l) (tribulle_forme1 (cdr l))))
+    (T (cons (car (tribulle_forme1 (cdr l))) (tribulle_forme1 (cons (car l) (cdr (tribulle_forme1 (cdr l)))))))
   )
 )
 
