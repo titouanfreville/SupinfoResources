@@ -1,0 +1,78 @@
+1 - Quel est le concept derrière la forme 1 (dite récursive non terminale) ? L'exprimer au sens des constructeur
+
+forme 1 -> non-terminale -> Naturel pour un programme récursif -> quand je fais un appel récursif, j'empile une OPERATION. J'ai encore un calcul à éxuté une fois le résultat du call récursif obtenue. 
+
+forme 2 -> terminale -> A pour but de supprimer la contrainte de RAM -> à l'appel récursif, je ne dois PLUS AVOIR D'OPERATION à faire. On utilise généralement une variable de stockage. 
+
+forme 1 :
+Soit inverse -> valeur (list)
+inverse([]) -> []
+inverse(e°[]) -> e
+inverse( e°L_d ) -> d°(inverse L)_e
+
+forme 2:
+Soit inverse -> valeur (list, sto1)
+inverse([]) -> sto1
+inverse(e°[]) -> sto1_e
+inverse( e°L ) -> inverse L (sto1_e)
+
+inverse list []
+
+2 - Faire en lisp la fonction membre d'arité deux qui retourne vrai si l'élément est dans la liste ? 
+
+(defun membre (x liste)
+	(cond
+		((null liste) ())
+		((equal (car liste) x) liste)
+		(T (membre x (cdr liste)))
+	)
+)
+
+3 - Est ce que la fonction suivante est correct en Python : 
+
+def magique x y l = x * l[y] 
+
+Incorrect car mauvaise syntaxe (corriger en def magique(x,y,l): x*l[y])
+
+Corrigé, elle multiple le y ème élément d'un array/liste par x. 
+
+
+----------------
+
+- Que fait la fonction suivante en python:
+
+def magique (n):
+	s = 0
+	for i in range (1, n +1):
+		s = s + i
+	return s
+
+Cette fonction renvoi la somme des entier de 1 -> n+1
+
+- Quel type disposons-nous dans le langage Python ? Pouvez-vous nommer et définir la
+fonction qui permet de faire un affichage avec des retours à la ligne ?
+
+Bool, int, long, float, sting, list. println()
+
+- Résultat de (cadar (caa adr (cdddr '(a d a e) ? Détaillez.
+
+D -> 
+
+
+------
+
+- Pourquoi disons-nous que Python est un langage à typage dynamique et à typage
+fortement typé ? Que pouvez-vous dire sur le type des entiers lors d’une concaténation avec une
+chaîne en Python ?
+
+-> Pas d'indication de type -> python détermine le type lui même
+-> Fortement typé -> parce que je ne peux pas ajouter un entier et une liste
+
+- Comment un la communication est elle géré dans un système expert ?
+Communication bidirectionnelle. Communication User -> Système, Systeme -> User. 
+
+
+En  20 mins 
+
+essayer de faire une fonction de tri sur liste d'entier en LISP (croissant).
+ 

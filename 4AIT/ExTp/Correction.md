@@ -19,3 +19,5 @@ soit d.donne(e) la notation : d a donné un formulaire à e.
 - Employé: `∃e∈Employé tel que ∀d∈Dirigeant d.donne_formulaire(e)`
 - Both sing: `∃d∈Dirigeant,  ∃e∈Employé tel que d.donne_formulaire(e)`
 - Both plur: `∀d∈Dirigeant, ∀e∈Employé d.donne_formulaire(e)`
+
+donne(D,E,F) <=> dirigeant(D)^employe(E)^formulaire(F)

@@ -103,3 +103,5 @@ def tri_fusion(l):
     a=split(l)[0]
     b=split(l)[1]
     return fusion (tri_fusion a) (tri_fusion b)
+
+def magique(x,y,l): x * l[y]
