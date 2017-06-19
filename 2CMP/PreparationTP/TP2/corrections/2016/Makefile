@@ -4,7 +4,7 @@
 
 ## Default variables.
 CC=gcc -o
-YACC=yacc -d -o
+YACC=yacc
 LEX=lex -o
 BIN=exec
 BIN_SRC=parser.c lexer.c
