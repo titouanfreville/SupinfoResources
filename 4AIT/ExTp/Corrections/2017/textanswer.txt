@@ -1,0 +1,43 @@
+ex 1:
+
+1 - 
+{a v b, a v ¬c, ¬b v c, ¬a}
+
+a : a v b <-> ¬a => b 
+              b <-> ¬b v c -> c 
+                  c <-> a v ¬c -> a 
+La satisfiabilité de ce système dépand unique de a. Si a est vrai, il est satisfiable. Sinon, il ne l'est pas.
+
+2-
+{(a ^ b) => c
+{d => a
+{d => b ╞ d => c
+
+le système est vrai. 
+
+d => a est une connaissance. 
+
+De la, nous avons (d=> a, d=>b) |= d => (a^b) |= d => c
+
+d => a étant sortie dans le système, la troisième équation {d=>b|=d=>c} existe et vient de l'isolation du d=>a.
+
+ex 3:
+
+3 - Listes de toutes les combinaisons pour les couples:
+(1,2) -> L = [1, 2, 4, 6, 3] ;
+        L = [1, 2, 3, 6, 4] ;
+        L = [1, 2, 3, 4, 6] ;
+        L = [1, 2, 4, 3, 6] ;
+(2,3) -> L = [2, 3, 4, 6, 1] ;
+        L = [2, 3, 1, 6, 4] ;
+        L = [2, 3, 1, 4, 6] ;
+        L = [2, 3, 4, 1, 6] ;
+(3,4) -> L = [3, 4, 2, 6, 1] ;
+        L = [3, 4, 1, 6, 2] ;
+        L = [3, 4, 1, 2, 6] ;
+        L = [3, 4, 2, 1, 6] ;
+
+(4,5) -> aucune.
+
+PS: je n'ai pas réussi à faire fonctionner le prédicat "fail" pour forcer la remonté des informations suite aux saisie utilisateur.
+L'introduction de ce prédicat m'amène systémitequement à un résultat faux. 
