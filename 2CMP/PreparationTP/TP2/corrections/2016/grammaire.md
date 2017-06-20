@@ -3,7 +3,7 @@
 ```OCaml
 G= (
   {"0", ..., "9", "a", ... "z", "(", ")", " "} (* terminaux*),
-  {<S>, <atome>, <liste>, <nombre>,<lettre>, <séparateur> } (* terminaux *),
+  {<S>, <atome>, <liste>, <nombre>,<lettre>, <séparateur> } (* non-terminaux *),
   { (* production *)
     <S> ::= <atome> | <liste>
     <liste> ::= {"("S")"}
