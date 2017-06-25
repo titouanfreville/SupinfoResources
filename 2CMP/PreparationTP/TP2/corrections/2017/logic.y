@@ -19,17 +19,17 @@
 %%
 logicExprs: logicExpr logicExprs | logicExpr;
 
-logicExpr: operationsBin EQ {printf("Logic Value : %d\n", $1);}
+logicExpr: operations EQ {printf("Logic Value : %d\n", $1);}
           | error '\n' {YYABORT;}
           | error EQ {YYABORT;};
 
-operationsBin: opFact AND operationsBin {$$=$1*$3;}
-             | opFact OR operationsBin {$$=($1|$3);}
+operations: opFact AND operations {$$=$1*$3;}
+             | opFact OR operations {$$=($1|$3);}
              | opFact;
 
-opFact: LBR operationsBin RBR {$$=$2;}
-      | VAL OR operationsBin {$$=($1|$3);}
-      | VAL AND operationsBin {$$=$1*$3;}
+opFact: LBR operations RBR {$$=$2;}
+      | VAL OR operations {$$=($1|$3);}
+      | VAL AND operations {$$=$1*$3;}
       | VAL {$$=$1;};
 %%
 void yyerror(const char *str)
@@ -51,7 +51,7 @@ int main(void)
         // return 2;
         // }
         int r = 0;
-        printf("Hello and welcome into Yacc Logical Calculator. Enter your expression using '=' to have the result (spaces unsupported). Exit by typing 'exit'.\n\n");
+        printf("Hello and welcome into Yacc Logical Calculator. Enter your expression using '=' to have the result (spaces unsupported).\n\n");
         r=yyparse();
         printf("\n");
         return r;
