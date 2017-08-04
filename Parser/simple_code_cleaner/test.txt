@@ -1,0 +1,8 @@
+this is a test sample      
+
+
+
+shoud remove multiple line break and trailling white space
+    on the right only :p 
+        ok ?        .azeae
+    aze,azoe,iza,e
