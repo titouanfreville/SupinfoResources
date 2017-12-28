@@ -1,3 +1,5 @@
+# Clone of CUED Template using supinfo Icon
+
 CUED PhD thesis template
 ========================
 
