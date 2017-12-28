@@ -1,0 +1,30 @@
+Ex 1:
+
+1 - Le calcul de proposition correspond a la simplification de proposition logique en vue d'obtenir une expression simple permettant d'associé
+a chaque variable propositionnelle la valeur correspondant au resultat logique de la proposition. 
+
+2 - Une intelligence artificielle correspond a un programme créer par l'homme capable de réaliser des actions d'intelligence. Ici, l'intelligence
+correspond a un ensemble complexe de paramère, allant de la capacité à apprendre à celle de créer. Nous pouvons donc considéré comme des intelligence
+artificielle tout programme indépendant de l'homme capable de réalisé une certaine quantité d'action résulant de ses capacités d'analyses, 
+compréhension, apprentissage, et autre.
+
+Ex 2:
+
+S : ¬(x => (u ∧ v)) <=> (x ∨ v)
+
+1 - Pour que S soit vrai: ¬(x => u ∧ v)) doit être vrai quand (x ∨ v) est vrai et faux quand il est faux. 
+¬(x => (u ∧ v)) vrai si : x vrai et u ou v faux ou x est faux.
+(x ∨ v) vrai si x vrai et/ou v vrai. 
+
+¬(x => (u ∧ v)) faux si : x vrai et u et v vrai
+(x ∨ v) faux si x faux et v faux. 
+
+S est donc vrai pour les couples:
+
+x: vrai, u: faux, v: vrai
+x: vrai, u: vrai, v: faux
+x: faux, u: faux, v: vrai
+x: faux, u: vrai, v: vrai
+
+2 - mise sous FNC:
+¬(x => (u ∧ v)) <=> (x ∨ v)

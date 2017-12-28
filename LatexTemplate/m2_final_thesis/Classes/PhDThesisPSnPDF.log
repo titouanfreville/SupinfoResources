@@ -1,0 +1,35 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.12.27)  28 DEC 2017 07:08
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**/home/titouan/Documents/phd-thesis-template-2.3.1/Classes/PhDThesisPSnPDF.cls
+
+(/home/titouan/Documents/phd-thesis-template-2.3.1/Classes/PhDThesisPSnPDF.cls
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+
+LaTeX Warning: You have requested package `',
+               but the package provides `PhDThesisPSnPDF'.
+
+Package: PhDThesisPSnPDF 2016/04/23 A PhD thesis class file by Krishna Kumar (v
+2.3.1)
+https://github.com/kks32/phd-thesis-template/
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 \newif\if@
+               print\@printfalse 
+Here is how much of TeX's memory you used:
+ 13 strings out of 493029
+ 508 string characters out of 6136233
+ 53108 words of memory out of 5000000
+ 3646 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 7i,0n,6p,161b,14s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+!  ==> Fatal error occurred, no output PDF file produced!
