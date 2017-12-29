@@ -1,11 +1,13 @@
 % ******************************************************************************
 % ****************************** Custom Margin *********************************
-
+\usepackage[utf8]{inputenc}
+\usepackage[cyr]{aeguill}
+\usepackage[frenchb]{babel}
 % Add `custommargin' in the document class options to use this section
 % Set {innerside margin / outerside margin / topmargin / bottom margin}  and
 % other page dimensions
 \ifsetCustomMargin
-  \RequirePackage[left=20mm,right=20mm,top=20mm,bottom=20mm]{geometry}
+  \RequirePackage[left=12mm,right=13mm,top=12mm,bottom=13mm]{geometry}
   \setFancyHdr % To apply fancy header after geometry package is loaded
 \fi
 
@@ -25,20 +27,8 @@
 \ifsetCustomFont
   % Set your custom font here and use `customfont' in options. Leave empty to
   % load computer modern font (default LaTeX font).
-  %\RequirePackage{helvet}
-
-  % For use with XeLaTeX
-  %  \setmainfont[
-  %    Path              = ./libertine/opentype/,
-  %    Extension         = .otf,
-  %    UprightFont = LinLibertine_R,
-  %    BoldFont = LinLibertine_RZ, % Linux Libertine O Regular Semibold
-  %    ItalicFont = LinLibertine_RI,
-  %    BoldItalicFont = LinLibertine_RZI, % Linux Libertine O Regular Semibold Italic
-  %  ]
-  %  {libertine}
-  %  % load font from system font
-  %  \newfontfamily\libertinesystemfont{Linux Libertine O}
+  \usepackage{helvet}
+  \renewcommand{\familydefault}{\sfdefault}
 \fi
 
 % *****************************************************************************
@@ -93,7 +83,7 @@
 % University guidelines
 
 % \doublespacing
-% \onehalfspacing
+\onehalfspacing
 % \singlespacing
 
 
@@ -189,3 +179,10 @@
 %\fi
 
 % Example todo: \mynote{Hey! I have a note}
+
+\usepackage{sectsty}
+
+\chapterfont{\fontsize{14}{15}\selectfont}
+\partfont{\fontsize{14}{15}\selectfont}
+\subsectionfont{\fontsize{14}{15}\selectfont}
+\sectionfont{\fontsize{14}{15}\selectfont}
