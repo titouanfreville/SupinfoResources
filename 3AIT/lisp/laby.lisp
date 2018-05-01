@@ -63,7 +63,7 @@
   (cond
     ((eq val '-))
     ((eq val'fin))
-  ))
+  )
 )
 ;test
 (check_nth lab '(0 1))

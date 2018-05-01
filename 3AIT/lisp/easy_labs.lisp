@@ -25,14 +25,17 @@
 ; ; F(E): selon E
 ; ;    Vide (E) : false
 ; ;    non Vide(E): Premier(E) == "red" || red_in (Fin(E))
-; (defun red_in (L)
-;   (cond
-;     ((null L) nil))
-;     ((eq (car L) "red"))
-;     ((red_in (cdr L)))
-;   )
-; )
-
+(defun red_in (l)
+  (cond
+    ((null l) nil)
+    ((eq (car l) 'red))
+    (t (red_in (cdr l) a))
+  )
+)
+(setq l1 '(green blue red))
+(setq l2 '(green blue blue))
+(red_in l1)
+(red_in l2)
 ; ; Au Sens des Constructeurs :
 ; ; Soit color_in la fonction -> Boolean
 ; ;  F([],color) = false
@@ -47,7 +50,7 @@
 ;   (cond
 ;     ((null L) nil)
 ;     ((eq (car L) color))
-;     ((red_in (cdr L)))
+;     (t (red_in (cdr L)))
 ;   )
 ; )
 ; ; ------------------------------------------------------------------------------
@@ -123,11 +126,11 @@
 ; ; --------- 3 ------------------------------------------------------------------
 ; ; Naïve
 ; ;
-; ; Au Sens des Constructeurs :
-; ; Soit O_1_eq_imp1 la fonction -> Boolean
-; ;  F([],n1,n0) = if n1>n0 then 1 else if n0>n1 then 0
-; ;  F(e°E,n1,n0) = Si e == 1 alors O_1_eq_imp1 E n1+1 n0,
-; ;                           sinon O_1_eq_imp1 E n1 n0+1
+Au Sens des Constructeurs :
+Soit O_1_eq_imp1 la fonction -> Boolean
+ F([],n1,n0) = if n1>n0 then 1 else if n0>n1 then 0
+ F(e°E,n1,n0) = Si e == 1 alors O_1_eq_imp1 E n1+1 n0,
+                          sinon O_1_eq_imp1 E n1 n0+1
 ; (defun O_1_eq_imp1 (L acc1 acc2)
 ;   (cond
 ;     ((null L) (cond (acc1>acc2 1) (acc2 > acc1 0))
@@ -137,12 +140,12 @@
 ; )
 
 ; ;Funny
-; ; Au Sens des Constructeurs :
-; ; Soit 0_1_eq_imp2 la fonction -> Boolean
-; ;  F([]) = true
-; ;  F(e°[]) = e
-; ;  F(p°L°d) = Si p == d alors e,
-; ;                       sinon 0_1_eq_imp2 L
+Au Sens des Constructeurs :
+Soit 0_1_eq_imp2 la fonction -> Boolean
+ F([]) = true
+ F(e°[]) = e
+ F(p°L°d) = Si p == d alors e,
+                      sinon 0_1_eq_imp2 L
 ; (defun 0_1_eq_imp2 (L)
 ;   (cond
 ;     ((null L) false)
@@ -156,11 +159,11 @@
 ; ; 1 - Split the list in 2
 ; ; 2 - Compare last element of list 1 && first element of list 2
 ; ; SPLIT :
-; ; Au Sens des Constructeurs :
-; ; Soit split la fonction -> (l1,l2)
-; ;  F([]) = (l1,l2)
-; ;  F(p°[]) = (p::l1,l2)
-; ;  F(p°L°d) = split L (p::l1) (d::l2)
+Au Sens des Constructeurs :
+Soit split la fonction -> (l1,l2)
+ F([]) = (l1,l2)
+ F(p°[]) = (p::l1,l2)
+ F(p°L°d) = split L (p::l1) (d::l2)
 ; (defun split (L acc1 acc2)
 ;   (cond
 ;     ((null L) (cons acc1 acc2))
@@ -179,6 +182,7 @@
 ; ---- TP 2 --------------------------------------------------------------------
 (setq l '(1 2 ((3 (4) 5))))
 ; --------- 1 ------------------------------------------------------------------
+(caaddr l)
 (defun last_of_list (l)
   (cond
     ((null l) l)
@@ -188,7 +192,7 @@
 )
 
 (last_of_list l)
-
+(caadr (caaddr l))
 (defun last_elements_first_tree_in_list (l)
   (cond
     ((null l) l)
@@ -198,6 +202,7 @@
   )
 )
 
+(cddr (caaddr l))
 (last_elements_first_tree_in_list l)
 
 (defun last_elements_first_list (l)
@@ -243,6 +248,9 @@
   )
 )
 (setq l6 '(a c))
+
+(lisp (third l))
+(atom (third l))
 
 ; (check_third_element l)
 ; (check_third_element l2)
@@ -358,6 +366,8 @@
     (t (inclus (cdr l1) l2))
   )
 )
+
+;217504
 ;test
 (setq l1 '(a b c d) l2 '(c a b f g e d) l3 '(c b d f g e i) l4 '(d a b c) ld '(a a b c d b e c f g g g))
 
@@ -400,15 +410,31 @@
 ;@compare
 ;@PARAMETER list1, list2f
 ;@RETURN true if list1 <=> list2, false sinon
-(defun compare (l1 l2)
+; (defun compare (l1 l2)
+;   (cond
+;     ((not (listp l1)) show_notlist(l1))
+;     ((not (listp l2)) show_notlist(l2))
+;     ((and (null l1) (null l2)) t)
+;     ((and (null l1) (listp l1)) nil)
+;     ((and (listp l1) (null l1)) nil)
+;     (t (compare (cdr l1) (remove_first (first l1) l2)))
+;   )
+; )
+
+(defun size_list(l)
   (cond
-    ((not (listp l1)) show_notlist(l1))
-    ((not (listp l2)) show_notlist(l2))
-    ((and (null l1) (null l2)) t)
-    ((and (null l1) (listp l1)) nil)
-    ((and (listp l1) (null l1)) nil)
-    (t (compare (cdr l1) (remove_first (first l1) l2)))
+    ((eq l nil) 0)
+    (t (+ 1 (size_list (cdr l))))
   )
+)
+
+(defun compare(l1 l2)
+    (and 
+      (and 
+        (eq (size_list l1) (size_list l2)) 
+        (inclus l1 l2)) 
+      (inclus l2 l1)
+    )
 )
 ;test
 (compare l1 l4)
@@ -558,7 +584,7 @@
   )
 )
 ;test
-(inordre 'princ tree)
+(inordre 'prin1 tree)
 (terpri)
 ;
 ;@postordre
@@ -580,7 +606,7 @@
   )
 )
 ;test
-(postordre 'princ tree)
+(postordre 'prin1 tree)
 (terpri)
 ;
 ;@largeur
@@ -615,5 +641,5 @@
   )
 )
 ;test
-(largeur 'princ tree)
+(largeur 'prin1 tree)
 ; ------------------------------------------------------------------------------

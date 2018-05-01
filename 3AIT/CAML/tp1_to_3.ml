@@ -15,8 +15,8 @@ let rec gen_list_float n = match f with
   | 0 -> [Random.float 100.]
   | _ -> Random.float 100. :: gen_list_float (f -. 1);;
 let rec gen_list_int n = match n with
-  | 0 -> [Random.int 100]
-  | _ -> Random.int 100 :: gen_list_int (n - 1);;
+  | 0 -> [Random.int 10000000]
+  | _ -> Random.int 10000000 :: gen_list_int (n - 1);;
 
 
 (* TP 1 - La Programmation Fonctionnelle (done with a langage :O) *)
@@ -424,3 +424,36 @@ reunion l1 l4;;
 inter l1 l2;;
 inter l2 l3;;
 inter l1 l4;;
+
+let l = gen_list_int(1000000);;
+let l2 = 1::2::3::4::5::[];;
+let rec split l =
+  match l with
+  | [] -> ([], [])
+  | t::[] -> (t::[], [])
+  | t1::t2::q -> begin
+    let (l1, l2) = split q in
+    (t1::l1, t2::l2)
+  end;;
+
+split l;;
+split l2;;
+
+let rec merge l1 l2 =
+  match (l1, l2) with
+  | ([], _) -> l2
+  | (_, []) -> l1
+  | (t1::q1, t2::q2) -> if (t1 < t2) 
+    then t1::merge q1 l2
+    else t2::merge l1 q2;;
+
+let (la, lb) = split (l2) in merge la lb;;
+let rec quicksort l =
+  match l with
+  | [] -> []
+  | t :: [] -> l
+  | _ -> let (l1, l2) = split l in 
+    merge (quicksort l1) (quicksort l2);;
+
+quicksort l;;
+quicksort l2;;

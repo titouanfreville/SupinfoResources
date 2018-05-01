@@ -1,12 +1,12 @@
 /* Question 2.1 */
-sommetPile(j).
-sommetPile(h).
-sommetPile(c).
-sommetPile(n).
-basPile(i).
-basPile(d).
-basPile(a).
-basPile(k).
+% sommetPile(j).
+% sommetPile(h).
+% sommetPile(c).
+% sommetPile(n).
+% basPile(i).
+% basPile(d).
+% basPile(a).
+% basPile(k).
 sur(j,i).
 sur(h,g).
 sur(g,f).

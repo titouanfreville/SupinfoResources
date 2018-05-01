@@ -152,7 +152,7 @@ def max_valeur(l):
 # print max_valeur(lmonnaie)
 # -------------------------------------------------------------------------------------
 # QUESTION 2.6 && 2.7 -----------------------------------------------------------------
-# Les foncitons définis en 2.4 && 2.5 vérifie déjà les propriétées demandé
+# Les fonctions définis en 2.4 && 2.5 vérifie déjà les propriétées demandé
 # Preuves :
 # SI m appartient à lm alors max(liste_valeur_inf_m) == m 
 # Sinon, SOMME(max(liste_valeur_inf_m)) étant == m est forcément la plus petite 

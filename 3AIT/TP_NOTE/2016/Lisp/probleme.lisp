@@ -75,7 +75,7 @@ Ville6
 (setq Dico4 (cons 'Ville4 Ville4))
 (setq Dico5 (cons 'Ville5 Ville5))
 (setq Dico6 (cons 'Ville6 Ville6))
-(setq Dico7 (cons 'Ville6 Ville7))
+(setq Dico7 (cons 'Ville7 Ville7))
 (setq EnsemblesVilles ())
 (setq EnsemblesVilles (ajoute EnsemblesVilles Dico1))
 (setq EnsemblesVilles (ajoute EnsemblesVilles Dico2))

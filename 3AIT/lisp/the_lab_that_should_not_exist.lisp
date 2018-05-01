@@ -22,12 +22,26 @@
     (when (< n 1) (return a))
   )
 )
+
+(defun recsomme (n)
+  (cond 
+    ((eq n 0) 0)
+    (t (+ n recsomme (- n 1)))
+  )
+)
 ;
 (defun inverser (l)
   (setq li nil)
   (loop
     (setq li (cons (first l) li) l (cdr l))
     (when (null l) (return li))
+  )
+)
+
+(defun recinverser (l acc)
+  (cond
+    ((null l) acc)
+    (t (recinverser (cdr l) (cons (car l) acc)))
   )
 )
 ;
@@ -38,7 +52,17 @@
     (when (< n 1) (return a))
   )
 )
+
+(defun recfact (n)
+  (cond
+    ((eq n 0) 1)
+    (t (* n recfact (- n 1)))
+  )
+)
 ;test
 (somme 10)
+(recsomme 10)
 (inverser '(a b c d))
+(recinverser '(a b c d))
 (fact 3)
+(recfact 3)
