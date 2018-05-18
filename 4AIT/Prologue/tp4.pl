@@ -63,11 +63,21 @@
   bigcars(X,Res):-price(X,Res,[_,12500]).
 % Exec in REPL.
 % %but
-%   red(X).
-%   ford(X).
-%   cheapcars(X,Res).
-%   bigcars(X,Res).
-%   medcars(X,Res).
+% :-red(X), write(X), nl, fail.
+% :-ford(X), write(X), nl, fail.
+% :-cheapcars(X,Res), writef('%w  %w', [X, Res]), nl.
+% :-bigcars(X,Res), writef('%w  %w', [X, Res]), nl.
+% :-medcars(X,Res), writef('%w  %w', [X, Res]), nl.
+
+%%
+% voiture(modele, nom_modele, nat, price)
+voiture(ferrari, california, it, 15000).
+voiture(ferrari, f12, it, 20000).
+voiture(ford, mustang, us, 7500).
+
+rouge(X):- voiture(_, X, it, _).
+
+
 % <><><><><><><><><><><><><><><><> <><><><> <><><><><><><><><><><><><><><><> %
 % <><><><><><><><><><><><><><><><> 4.2 TREE <><><><><><><><><><><><><><><><> %
 %clauses
@@ -143,6 +153,9 @@
 % min 
 min(X,Y,Min):- X < Y, Min is X, !.
 min(X,Y,Min):- X > Y, Min is Y.
+
+min_simp(X,Y,X):- X < Y, !.
+min_simp(_,Y,Y).
 % test
 %  min(1,2, Min) %% Min=1. 
 %  min(2,1, Min) %% Min=1.
@@ -178,7 +191,9 @@ sommeList([X|Q],Res):- sommeList(Q,OldRes), Res is OldRes + X.
   relation(sur).
   relation(sous).
 %foncteurs
-  phrase([Article1, Sujet, Verbe, Relation, Article2, Complement]):- sujet(Article1, Sujet), verbe(Verbe), relation(Relation), objet(Article2,Complement), !.
+  phrase([Article1, Sujet, Verbe, Relation, Article2, Complement]):- 
+    sujet(Article1, Sujet), verbe(Verbe),
+    relation(Relation), objet(Article2,Complement).
 %but
 %  phrase([le, chat, dort, sous, la, table]). %% true
 %  phrase([]) %% false
@@ -237,8 +252,6 @@ merge([], List, List).
 merge([T1|Q1],[T2|Q2],[T1|List]):-T1<T2, merge(Q1, [T2|Q2], List).
 merge([T1|Q1],[T2|Q2],[T2|List]):-not(T1<T2), merge([T1|Q1], Q2, List).
 
-tri([], []).
-tri([T|[]], [T]).
 tri([], []).
 tri([T|[]], [T]).
 tri(List, Res):- split(List, L1, L2), tri(L1, Res1), tri(L2, Res2), merge(Res1, Res2, Res), !.

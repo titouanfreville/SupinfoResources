@@ -6,7 +6,8 @@ ex 1:
 a : a v b <-> ¬a => b 
               b <-> ¬b v c -> c 
                   c <-> a v ¬c -> a 
-La satisfiabilité de ce système dépand unique de a. Si a est vrai, il est satisfiable. Sinon, il ne l'est pas.
+
+Pour que le système soit satisfiable pour a, il faudrait obtenir Epsilon.
 
 2-
 {(a ^ b) => c
@@ -19,7 +20,9 @@ d => a est une connaissance.
 
 De la, nous avons (d=> a, d=>b) |= d => (a^b) |= d => c
 
-d => a étant sortie dans le système, la troisième équation {d=>b|=d=>c} existe et vient de l'isolation du d=>a.
+d => a étant sortie dans le système, 
+la troisième équation {d=>b|=d=>c} existe et vient de 
+l'isolation du d=>a.
 
 ex 3:
 

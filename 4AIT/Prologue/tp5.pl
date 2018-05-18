@@ -22,9 +22,11 @@ resetCubeEnv():- retractall(link(_,_)), initEnv().
 % Move cube
 move(_,base,_).
 move(C,B,base):- not(link(C,_)), link(B,C),retract(link(B,C)), addRule(link,base,C).
-move(C,B1,B2):- not(link(C,_)), link(B1,C), link(_,B2), not(link(B2,_)), retract(link(B1,C)), addRule(link,B2,C).
+move(C,B1,B2):- not(link(C,_)), link(B1,C), link(_,B2), not(link(B2,_)),
+    retract(link(B1,C)), addRule(link,B2,C).
 % Solve problem
-placeCube(A,B):- link(B,A), writef('Cube %w is already over cube %w \n', [A,B]), printCubes(), !.
+placeCube(A,B):- link(B,A), writef('Cube %w is already over cube %w \n', [A,B]),
+    printCubes(), !.
 placeCube(A,B):- link(Base, A), move(A, Base, B), printCubes(), !.
 placeCube(A,B):- link(A,E), move(E,A,base), placeCube(A,B).
 placeCube(A,B):- link(B,E), move(E,B,base), placeCube(A,B).
