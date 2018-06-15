@@ -1,7 +1,7 @@
 % ******************************* PhD Thesis Template **************************
 % Please have a look at the README.md file for info on how to use the template
 
-\documentclass[a4paper,11pt,customfont,numbered,print,oneside,custommargin]{Classes/PhDThesisPSnPDF}
+\documentclass[a4paper,11pt,customfont,custombib,print,oneside,custommargin]{Classes/PhDThesisPSnPDF}
 
 
 % ******************************************************************************
@@ -125,8 +125,6 @@
 % \printnomenclature[space] space can be set as 2em between symbol and description
 %\printnomenclature[3em]
 
-\printnomenclature
-
 \include{Abstract/abstract}
 % ******************************** Main Matter *********************************
 \mainmatter
@@ -134,11 +132,11 @@
 \include{Chapter1/chapter1} % Presentation de l'entreprise 13-15 pages .........
 \include{Chapter2/chapter2} % Analyse du contexte ?? 7-8 pages
 \include{Chapter3/chapter3} % Problématique 3-5 pages
-%\include{Chapter4/chapter4} % Méthodes habituellement utilisées pour une situation présentant des similitudes 3-5 pages
-%\include{Chapter5/chapter5} % Exposé des décisions prises et des interventions menées par le stagiaire pour résoudre le problème 3-5 pages
-%\include{Chapter6/chapter6} % Démonstration d’une originalité dans l’élaboration et la mise en œuvre de la solution  3-5 pages
-%\include{Chapter7/chapter7} % Analyse de l’approche choisie 1 - 3 pages
-%\include{Chapter8/chapter8} % Réflexion sur le stage et le mémoire 1 - 3 pages
+\include{Chapter4/chapter4} % Méthodes habituellement utilisées pour une situation présentant des similitudes 3-5 pages
+\include{Chapter5/chapter5} % Exposé des décisions prises et des interventions menées par le stagiaire pour résoudre le problème 3-5 pages
+\include{Chapter6/chapter6} % Démonstration d’une originalité dans l’élaboration et la mise en œuvre de la solution  3-5 pages
+\include{Chapter7/chapter7} % Analyse de l’approche choisie 1 - 3 pages
+\include{Chapter8/chapter8} % Réflexion sur le stage et le mémoire 1 - 3 pages
 
 %\include{Conclusion/Conclusion}
 % ********************************** Back Matter *******************************
@@ -163,7 +161,7 @@
 % specified in the preamble.tex file in the custombib section.
 % Comment out the lines related to natbib above and uncomment the following line.
 
-%\printbibliography[heading=bibintoc, title={References}]
+\printbibliography[heading=bibintoc, title={References}]
 
 
 \end{spacing}

@@ -13,7 +13,7 @@ int main(int argc, char** argv)
     }
     yyin=fopen(argv[1],"r");
     if (yyin==NULL){
-        printf("Cannont open <%s>.\n", argv[1]);
+        printf("Cannot open <%s>.\n", argv[1]);
         return 2;
     }
     yylex();

@@ -2,7 +2,7 @@ default: init genall compileall test
 
 genall: gen_copie gen_compt_voyelle gen_compt_mot gen_compt_consonne gen_compt_linebreak gen_compt_allchars gen_compt_chars_notarbreak gen_compt_class gen_filt_sl_comment gen_filt_ml_comment gen_filt_chars gen_copie_files gen_crypt gen_decrypt gen_print_nb gen_calc gen_pgm_analysor gen_polish_syntax_checker_automate gen_polish_syntax_checker
 
-compileall: compile_copie compile_compt_voyelle compile_compt_mot compile_compt_consonne compile_compt_linebreak compile_compt_allchars compile_compt_chars_notarbreak compile_compt_class compile_polish_syntax_checker compile_filt_sl_comment compile_filt_ml_comment compile_filt_chars compile_copie_files compile_crypt compile_decrypt compile_print_nb compile_calc compile_pgm_analysor compile_polish_syntax_checker_automate
+compileall: compile_copie compile_compt_voyelle compile_compt_consonne compile_compt_linebreak compile_compt_allchars compile_compt_chars_notarbreak compile_compt_class compile_polish_syntax_checker compile_filt_sl_comment compile_filt_ml_comment compile_filt_chars compile_copie_files compile_crypt compile_decrypt compile_print_nb compile_calc compile_pgm_analysor compile_polish_syntax_checker_automate
 
 init:
 	-mkdir compiled 1> /dev/null 2> /dev/null > /dev/null
@@ -129,7 +129,7 @@ compile_polish_syntax_checker_automate: polish_syntax_checker_automate.c
 	gcc -o compiled/polish_syntax_checker_automate polish_syntax_checker_automate.c
 # ########### ######## ########### #
 # ########### # TEST # ########### #
-test:
+test: copie_from_lex compt_voyelle compt_consonne compt_mot compt_class filt_sl_comment copie_files polish_syntax_checker_automate polish_syntax_checker
 	./test.sh makefile makefile test.filt test.filt.out test.pgm test.calcs
 # ########### ######## ########### #
 # ###########  CLEAN   ########### #

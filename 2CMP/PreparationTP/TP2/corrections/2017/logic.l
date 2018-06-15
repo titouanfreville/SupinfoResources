@@ -13,7 +13,7 @@
 
   #define YYSTYPE int;
   extern YYSTYPE yylval;
-
+  extern void yyerror();
   void printLexicalError(int nbError, int nbLine, char* error) {
     printf("\n%sWarning - lexical error (%d), line (%d):%s %s\n", CYN, nbError, nbLine, RESET, error);
   } 

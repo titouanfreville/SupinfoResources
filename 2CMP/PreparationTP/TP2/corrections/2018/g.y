@@ -15,32 +15,23 @@
 
     int yylex();
 %}
-%token VAL AND OR LBR EQ RBR
+%token S D Z One Two A
 %%
-logicExprs: logicExpr logicExprs | logicExpr;
-
-logicExpr: operations EQ {printf("Logic Value : %d\n", $1);}
-          | error '\n' {YYABORT;}
-          | error EQ {YYABORT;};
-
-operations: opFact AND operations {$$=$1*$3;}
-             | opFact OR operations {$$=($1|$3);}
-             | opFact;
-
-opFact: LBR operations RBR {$$=$2;}
-      | VAL OR operations {$$=($1|$3);}
-      | VAL AND operations {$$=$1*$3;}
-      | VAL {$$=$1;};
+sExpr:    zExpr
+        | S dExpr;
+zExpr: Z;
+dExpr: bExpr | dExpr D | sExpr;
+bExpr: One | Two | A | bExpr dExpr;
 %%
 int yyerror(const char *str)
 {
   extern int nbLine;
   printf("%sFatal - syntaxe error line (%d): %s.\n",RED,nbLine,str, RESET);
-  return 0;
+  return nbLine;
 }
 
 
-int main(void)
+int main(int argc, char** argv)
 {
         // if (argc != 2){
         // printf("Usage:\t %s FolderToCopy\n", argv[0]);
@@ -52,7 +43,6 @@ int main(void)
         // return 2;
         // }
         int r = 0;
-        printf("Hello and welcome into Yacc Logical Calculator. Enter your expression using '=' to have the result (spaces unsupported).\n\n");
         r=yyparse();
         printf("\n");
         return r;

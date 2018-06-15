@@ -39,21 +39,21 @@
    /* Put the tokens into the symbol table, so that GDB and other debuggers
       know about them.  */
    enum yytokentype {
-     VAL = 258,
-     AND = 259,
-     OR = 260,
-     LBR = 261,
-     EQ = 262,
-     RBR = 263
+     S = 258,
+     D = 259,
+     Z = 260,
+     One = 261,
+     Two = 262,
+     A = 263
    };
 #endif
 /* Tokens.  */
-#define VAL 258
-#define AND 259
-#define OR 260
-#define LBR 261
-#define EQ 262
-#define RBR 263
+#define S 258
+#define D 259
+#define Z 260
+#define One 261
+#define Two 262
+#define A 263
 
 
 
